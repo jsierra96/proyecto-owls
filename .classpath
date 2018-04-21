@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/Evaluar.jar"/>
+	<classpathentry kind="lib" path="lib/expresiones.jar"/>
+	<classpathentry kind="lib" path="lib/fondo.jar"/>
+	<classpathentry kind="lib" path="lib/Graficas.jar"/>
+	<classpathentry kind="lib" path="lib/h2-1.4.196.jar"/>
+	<classpathentry kind="lib" path="lib/libreriasJon.jar"/>
+	<classpathentry kind="lib" path="lib/Lion.jar"/>
+	<classpathentry kind="lib" path="lib/ProyectoGrafica.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
