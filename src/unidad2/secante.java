@@ -5,7 +5,6 @@ import java.awt.*;
 import javax.swing.*;
 import LibreriasLion.*;
 import java.awt.Color;
-import java.awt.MouseInfo;
 import java.io.*;
 import clases.window;
 public class secante{ //Clase

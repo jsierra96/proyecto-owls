@@ -5,6 +5,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.io.*;
 import clases.*;
+import LibreriasLion.avaluaexpre;
 //clase
 public class Biseccion{
 
@@ -154,6 +155,7 @@ public class Biseccion{
         txt1.setText("");       //se limpian los componentes de entrada de datos
         txt2.setText("");       //
         txt3.setText("");       //
+        tx1.setText("");       //
         txtarea.setText("");    //Se limpia el area donde se muestra el resultado
     }//GEN-LAST:event_btn2ActionPerformed
                 //Boton Validar                                                         //Evento al hacer clic en el boton
@@ -195,7 +197,7 @@ public class Biseccion{
     }
     //Metodo con formula para el resultado programada
     public double funcion(double x) {
-      double resultado =x*Math.sin(x)-1;  //Variable que guardara el resultado
+      double resultado =avaluaexpre.Posfija(tx1.getText(),String.valueOf(x)); //Variable que guardara el resultado
       return resultado;
    }
     //Metodo para resolver la raiz por el metodo de Biseccion
