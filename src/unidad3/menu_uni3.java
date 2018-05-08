@@ -47,46 +47,46 @@ public class menu_uni3{
         btn3 = new javax.swing.JButton();
         btn4 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        btn1.setBorder(null);
+        btn1.setBorder(null);   //Quita el borde
         btn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn1ActionPerformed(evt);
             }
         });
-        btn1.setBounds(30, 70, 300, 120);
-        jPanel2.add(btn1);
-        btn2.setBorder(null);
+        btn1.setBounds(30, 70, 300, 120);   //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn1); //Añade el componente al panel
+        btn2.setBorder(null);   //Quita el borde
         btn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn2ActionPerformed(evt);
             }
         });
-        btn2.setBounds(360, 70, 300, 120);
-        jPanel2.add(btn2);
+        btn2.setBounds(360, 70, 300, 120);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn2);  //Añade el componente al panel
 
-        btn3.setBorder(null);
+        btn3.setBorder(null);   //Quita el borde
         btn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn3ActionPerformed(evt);
             }
         });
-        btn3.setBounds(30, 230, 300, 120);
-        jPanel2.add(btn3);
+        btn3.setBounds(30, 230, 300, 120);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn3);  //Añade el componente al panel
 
-        btn4.setBorder(null);
+        btn4.setBorder(null);   //Quita el borde
         btn4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn4ActionPerformed(evt);
             }
         });
-        btn4.setBounds(360, 230, 300, 120);
-        jPanel2.add(btn4);
+        btn4.setBounds(360, 230, 300, 120); //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn4);  //Añade el componente al panel
 
         jLabel3.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel3.setText("Unidad 3 Ecuaciones Simultaneas");
-        jLabel3.setBounds(80, 10, 500,50);
-        jPanel2.add(jLabel3);
+        jLabel3.setForeground(new java.awt.Color(0, 102, 102)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel3.setText("Unidad 3 Ecuaciones Simultaneas"); //configura el texto a mostrar
+        jLabel3.setBounds(80, 10, 500,50);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(jLabel3);   //Añade el componente al panel
         ventana = new window(700,440,jPanel2,btn1,false);
     }// </editor-fold>//GEN-END:initComponents
      
@@ -94,12 +94,12 @@ public class menu_uni3{
     
 //Abrir metodo Gauss Seidel                                                         //Evento al hacer clic en el boton
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        seidel obj=new seidel();
+        seidel obj1=new seidel();
         ventana.dispose();
     }//GEN-LAST:event_btn1ActionPerformed
 //Abrir metodo Cramer                                                               //Evento al hacer clic en el boton
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        Cramer obj=new Cramer();
+        Cramer obj2=new Cramer();
         ventana.dispose();
     }//GEN-LAST:event_btn2ActionPerformed
 //Abrir metodo Gauss Jordan                                                             //Evento al hacer clic en el boton
@@ -109,7 +109,7 @@ public class menu_uni3{
     }//GEN-LAST:event_btn3ActionPerformed
 //Menu principal                                                                        //Evento al hacer clic en el boton
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        menuprincipal obj=new menuprincipal();
+        menuprincipal obj3=new menuprincipal();
         ventana.dispose();
     }
 }

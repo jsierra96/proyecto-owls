@@ -5,6 +5,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.io.*;
 import clases.*;
+import LibreriasLion.avaluaexpre;
 //clase
 public class Biseccion{
 
@@ -14,9 +15,6 @@ public class Biseccion{
   JButton btn2 = new JButton();
   JButton btn3 = new JButton();
   JButton btn4 = new JButton();
-  JButton cerrar = new JButton();
-  JLabel jLabel1 = new JLabel();
-  JLabel jLabel2 = new JLabel();
   JLabel jLabel3 = new JLabel();
   JLabel jLabel4 = new JLabel();
   JLabel jLabel5 = new JLabel();
@@ -24,16 +22,17 @@ public class Biseccion{
   JPanel jPanel2 = new JPanel();
   JScrollPane jScrollPane1 = new JScrollPane();
   JButton min1 = new JButton();
+  JTextField tx1 = new JTextField();
   JTextField txt1 = new JTextField();
   JTextField txt2 = new JTextField();
   JTextField txt3 = new JTextField();
   JTextArea txtarea = new JTextArea();
+  JLabel fun=new JLabel();
   window ventana;
   // End of variables declaration//GEN-END:variables
-   private double a;  //variable que almacena el valor de Xi
-   private double b;  //Variable que almacena el valor de Xs
-   private double error;  //Variable para almacenar el margen de error
-   int x,y;  //Variables para almacenar la posicion del mouse para el uso de un evento
+   double a;  //variable que almacena el valor de Xi
+   double b;  //Variable que almacena el valor de Xs
+   double error;  //Variable para almacenar el margen de error
 
     public Biseccion() {                //Método constructor
         initComponents();               //Inicializar y configurar componentes
@@ -41,96 +40,105 @@ public class Biseccion{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
         min1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {   //Evento al entrar al componente el puntero el mouse
                 min1MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt) {     //Evento al salir del componente el puntero del mouse   
                 min1MouseExited(evt);
             }
         });
         min1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 min1ActionPerformed(evt);
             }
         });
-        jLabel8.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36));
-        jLabel8.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel8.setText("Biseccion");
-        jLabel8.setBounds(239, 0, 150, 50);
-        jPanel2.add(jLabel8);
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(33, 97, 140, 2)));
+        jLabel8.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); //Personaliza la fuente
+        jLabel8.setForeground(new java.awt.Color(0, 102, 102)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel8.setText("Biseccion");   //Configura el texto a mostrar
+        jLabel8.setBounds(239, 0, 150, 50); //configuracion de tamaño y posicion al componente
+        jPanel2.add(jLabel8);   //Se alade el componente al panel
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(33, 97, 140, 2))); //Modificar el borde
         txtarea.setEditable(false);
         txtarea.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(33, 97, 140), 2));
-        txtarea.setBackground(new java.awt.Color(178, 235, 242));
-        txtarea.setColumns(20);
-        txtarea.setRows(5);
-        jScrollPane1.setViewportView(txtarea);
-        jScrollPane1.setBounds(400, 60, 230, 230);
-        jPanel2.add(jScrollPane1);
-        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 18));
-        jLabel3.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel3.setText("Xs:");
-        jLabel3.setBounds(95, 160, 30, 30);
-        jPanel2.add(jLabel3);
-        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 18));
-        jLabel4.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel4.setText("Xi:");
-        jLabel4.setBounds(95, 110, 30,30);
-        jPanel2.add(jLabel4);
-        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 18));
-        jLabel5.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel5.setText("Tolerancia:");
-        jLabel5.setBounds(30, 230, 100,30);
-        jPanel2.add(jLabel5);
-        btn1.setText("Calcular");
+        txtarea.setBackground(new java.awt.Color(178, 235, 242));   //se configura el color de fondo del componente
+        txtarea.setColumns(20); //Configuracion de la columna
+        txtarea.setRows(5); //Configuracion de la fila
+        jScrollPane1.setViewportView(txtarea); //mostrar componente Scroll
+        jScrollPane1.setBounds(400, 60, 230, 230);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(jScrollPane1);  //Se alade el componente al panel
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); //Personaliza la fuente
+        jLabel3.setForeground(new java.awt.Color(0, 102, 102)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel3.setText("Xs:"); //Configura el texto a mostrar
+        jLabel3.setBounds(95, 160, 30, 30); //configuracion de tamaño y posicion al componente
+        jPanel2.add(jLabel3);   //Se alade el componente al panel
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); //Personaliza la fuente
+        jLabel4.setForeground(new java.awt.Color(0, 102, 102)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel4.setText("Xi:"); //Configura el texto a mostrar
+        jLabel4.setBounds(95, 110, 30,30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(jLabel4);   //Se alade el componente al panel
+        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); //Personaliza la fuente
+        jLabel5.setForeground(new java.awt.Color(0, 102, 102)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel5.setText("Tolerancia:"); //Configura el texto a mostrar
+        jLabel5.setBounds(30, 230, 100,30); //configuracion de tamaño y posicion al componente
+        jPanel2.add(jLabel5);   //Se alade el componente al panel
+        btn1.setText("Calcular");   //Configura el texto a mostrar
         btn1.setToolTipText("");
         btn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn1ActionPerformed(evt);
             }
         });
-        btn1.setBounds(240, 100, 100, 30);
-        jPanel2.add(btn1);
-        btn2.setText("Limpiar");
+        btn1.setBounds(240, 100, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn1); //Se alade el componente al panel
+        btn2.setText("Limpiar");    //Configura el texto a mostrar
         btn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn2ActionPerformed(evt);
             }
         });
-        btn2.setBounds(240, 150, 100, 30);
-        jPanel2.add(btn2);
-        btn3.setText("Regresar");
+        btn2.setBounds(240, 150, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn2);  //Se alade el componente al panel
+        btn3.setText("Regresar");   //Configura el texto a mostrar
         btn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn3ActionPerformed(evt);
             }
         });
-        btn3.setBounds(530, 300, 100, 30);
-        jPanel2.add(btn3);
-        txt1.setBackground(new java.awt.Color(178, 235, 242));
+        btn3.setBounds(530, 300, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn3);  //Se alade el componente al panel
+        txt1.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
         txt1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         txt1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(33, 97, 140, 2)));
-        txt1.setBounds(130, 110, 60, 30);
-        jPanel2.add(txt1);
-        txt2.setBackground(new java.awt.Color(178, 235, 242));
-        txt2.setFont(new java.awt.Font("Comic Sans MS", 1, 14));
+        txt1.setBounds(130, 110, 60, 30);   //configuracion de tamaño y posicion al componente
+        jPanel2.add(txt1);  //Se alade el componente al panel
+        txt2.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
+        txt2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); //Configuracion de la fuente de letra
         txt1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(33, 97, 140), 2));
         txt2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(33, 97, 140), 2));
-        txt2.setBounds(130, 160, 60, 30);
-        jPanel2.add(txt2);
-        txt3.setBackground(new java.awt.Color(178, 235, 242));
+        txt2.setBounds(130, 160, 60, 30);   //configuracion de tamaño y posicion al componente
+        jPanel2.add(txt2);  //Se alade el componente al panel
+        txt3.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
         txt3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         txt3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(33, 97, 140), 2));
-        txt3.setBounds(130, 230, 60, 30);
-        jPanel2.add(txt3);
-        btn4.setText("Validar");
+        txt3.setBounds(130, 230, 60, 30);   //configuracion de tamaño y posicion al componente
+        jPanel2.add(txt3);  //Se alade el componente al panel
+        btn4.setText("Validar");    //Configura el texto a mostrar
         btn4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn4ActionPerformed(evt);
             }
         });
-        btn4.setBounds(100, 270, 100, 30);
-        jPanel2.add(btn4);
+        btn4.setBounds(100, 270, 100, 30);  //configuracion de tamaño y posicion al componente
+        tx1.setBackground(new java.awt.Color(178, 235, 242));
+        tx1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(33, 97, 140), 2));
+        fun.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); //Personaliza la fuente
+        fun.setForeground(new java.awt.Color(0, 102, 102)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        fun.setText("Funcion:"); //Configura el texto a mostrar
+        tx1.setBounds(100, 60, 120, 25);
+        fun.setBounds(18, 68, 90, 18);
+        jPanel2.add(tx1);
+        jPanel2.add(fun);
+        jPanel2.add(btn4);  //Se alade el componente al panel
         ventana=new window(650,370,jPanel2,min1,true);
     }
         //Botón calcular                                                             //Evento al hacer clic en el boton
@@ -152,7 +160,7 @@ public class Biseccion{
                 //Boton Validar                                                         //Evento al hacer clic en el boton
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
         if(txt1.getText().equals("")&&txt2.getText().equals("")&&txt3.getText().equals("")){  //valida que las cajas de Xi, Xs y la tolerancia no esten vacias
-            JOptionPane.showMessageDialog(null,"Hay al gun campo vacio");
+            JOptionPane.showMessageDialog(null,"Hay algun campo vacio");
         }else{
             try {                                       //Se valida con una excepcion que lo campos en los txt1,2,3 sean numericos y no interrumpir la ejecucion
 		Float.parseFloat(txt1.getText());
@@ -175,7 +183,7 @@ public class Biseccion{
  //Evento del boton Ayuda, para el enlace desde el boton hacia el documento propio del metodo       //Evento al hacer clic en el boton
     private void min1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_min1ActionPerformed
         String ruta = System.getProperty("user.dir"); //Variable para almacenar la ruta del sistema
-        String fileLocal = ruta + "/src/docu/EXTRAPOLACION.docx"; //Variable para almacenar el nombre del documento de ayuda y la carpeta donde se encuentra
+        String fileLocal = ruta + "/docu/RAÍCES-DE-UNA-FUNCIÓN-BISECCION.docx"; //Variable para almacenar el nombre del documento de ayuda y la carpeta donde se encuentra
         try                             //excepcion para abrir sin problema el archivo de ayuda
         {
             File path = new File(fileLocal);
@@ -188,7 +196,7 @@ public class Biseccion{
     }
     //Metodo con formula para el resultado programada
     public double funcion(double x) {
-      double resultado =x*Math.sin(x)-1;  //Variable que guardara el resultado
+      double resultado =avaluaexpre.Posfija(tx1.getText(),String.valueOf(x));  //Variable que guardara el resultado
       return resultado;
    }
     //Metodo para resolver la raiz por el metodo de Biseccion
@@ -224,7 +232,7 @@ public class Biseccion{
          if(Math.abs(fc) <= error)
             ms=ms+"\nIteracion " + iteracion + " :  Punto Medio: " + c + " \nError: "+ Math.abs(fc)+"\nRaiz: "+ c;
          if(iteracion >500){                                            //Si las iteracciones superan las 500 vueltas, el metodo no es el mas preciso
-              ms=ms+"\n\n��ATENCION!!\nVerificar la funcion por otro metodo, existe "
+              ms=ms+"\n\n��ATENCION!!\nVerificar la funcion por otro metodo, existe "
                       + "una posible sucesion infinita (Calculo Ciclado)"+"\n\nIteracion " + iteracion + " : "
                       + " Punto Medio: " + c + " Error: "+ Math.abs(fc);
               break;

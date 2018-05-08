@@ -38,7 +38,6 @@ public class extrapolacion{
     JTextArea txtarea=new JTextArea();
     JTextArea txtarea2=new JTextArea();
     JTextField txtformula=new JTextField();
-    int x=0,y=0; //Variables para almacenar la posición del mouse
     JTable tabla ; //componente tabla
     double valx []; //Vector para x
     double valy[]; //Vector para y
@@ -67,50 +66,50 @@ public class extrapolacion{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
         min1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {   //Evento al entrar al componente el puntero el mouse
                 min1MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt) {    //Evento al salir del componente el puntero del mouse
                 min1MouseExited(evt);
             }
         });
         min1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 min1ActionPerformed(evt);
             }
         });
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 14));
-        jLabel1.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel1.setText("Numero de datos (m):");
-        jLabel1.setBounds(20, 60, 150, 20);
-        jPanel4.add(jLabel1);
-        txt1.setBackground(new java.awt.Color(178, 235, 242));
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); //Configura la fuete de letra
+        jLabel1.setForeground(new java.awt.Color(0, 102, 153)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel1.setText("Numero de datos (m):"); //configura el texto a mostrar
+        jLabel1.setBounds(20, 60, 150, 20);//configuracion de tamaño y posicion al componente
+        jPanel4.add(jLabel1);   //Añade el componente al panel
+        txt1.setBackground(new java.awt.Color(178, 235, 242));   //se configura el color de fondo del componente
         txt1.setFont(new java.awt.Font("Comic Sans MS", 1, 14));
-        txt1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(52, 73, 94)));
-        txt1.setBounds(180, 60, 50, 20);
-        jPanel4.add(txt1);
-        btn1.setFont(new java.awt.Font("Comic Sans MS", 1, 14));
-        btn1.setForeground(new java.awt.Color(0, 102, 153));
-        btn1.setText("Cargar tabla");
+        txt1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(52, 73, 94))); //configurar borde del componente
+        txt1.setBounds(180, 60, 50, 20);    //configuracion de tamaño y posicion al componente
+        jPanel4.add(txt1);  //Añade el componente al panel
+        btn1.setFont(new java.awt.Font("Comic Sans MS", 1, 14));    //Configura la fuete de letra
+        btn1.setForeground(new java.awt.Color(0, 102, 153));    // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        btn1.setText("Cargar tabla");   //configura el texto a mostrar
         btn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn1ActionPerformed(evt);
             }
         });
-        btn1.setBounds(270, 60, 140, 30);
-        jPanel4.add(btn1);
-        btn2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        btn2.setForeground(new java.awt.Color(0, 102, 153));
-        btn2.setText("Graficar");
+        btn1.setBounds(270, 60, 140, 30);   //configuracion de tamaño y posicion al componente
+        jPanel4.add(btn1);  //Añade el componente al panel
+        btn2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N  //Configura la fuete de letra
+        btn2.setForeground(new java.awt.Color(0, 102, 153));    // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        btn2.setText("Graficar");//configura el texto a mostrar
         btn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn2ActionPerformed(evt);
             }
         });
-        btn2.setBounds(80, 280, 100, 30);
-        jPanel4.add(btn2);
-        jPanel3.setBackground(new java.awt.Color(178, 235, 242));
-        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));
+        btn2.setBounds(80, 280, 100, 30);   //configuracion de tamaño y posicion al componente
+        jPanel4.add(btn2);  //Añade el componente al panel
+        jPanel3.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));   //configurar borde del componente
         graf1.setBackground(new java.awt.Color(178, 235, 242));
         javax.swing.GroupLayout graf1Layout = new javax.swing.GroupLayout(graf1);
         graf1.setLayout(graf1Layout);
@@ -138,124 +137,124 @@ public class extrapolacion{
                 .addComponent(graf1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel3.setBounds(460, 60, 370, 250);
-        jPanel4.add(jPanel3);
-        btn3.setFont(new java.awt.Font("Comic Sans MS", 1, 14));
-        btn3.setForeground(new java.awt.Color(0, 102, 153));
-        btn3.setText("Lineal");
+        jPanel3.setBounds(460, 60, 370, 250);  //configuracion de tamaño y posicion al componente
+        jPanel4.add(jPanel3);   //Añade el componente al panel
+        btn3.setFont(new java.awt.Font("Comic Sans MS", 1, 14));    //Configura la fuete de letra
+        btn3.setForeground(new java.awt.Color(0, 102, 153));    // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        btn3.setText("Lineal"); //configura el texto a mostrar
         btn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) { //Evento al hacer clic en el boton
                 btn3ActionPerformed(evt);
             }
         });
-        btn3.setBounds(80, 320, 100, 30);
-        jPanel4.add(btn3);
-        btn4.setFont(new java.awt.Font("Comic Sans MS", 1, 14));
-        btn4.setForeground(new java.awt.Color(0, 102, 153));
-        btn4.setText("Polinomial");
+        btn3.setBounds(80, 320, 100, 30);   //configuracion de tamaño y posicion al componente
+        jPanel4.add(btn3);  //Añade el componente al panel
+        btn4.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); //Configura la fuete de letra
+        btn4.setForeground(new java.awt.Color(0, 102, 153));    // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        btn4.setText("Polinomial"); //configura el texto a mostrar
         btn4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {  //Evento al hacer clic en el boton
                 btn4ActionPerformed(evt);
             }
         });
-        btn4.setBounds(240, 320, 100, 30);
-        jPanel4.add(btn4);
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));
-        jScrollPane1.setOpaque(false);
-        txtarea.setEditable(false);
-        txtarea.setBackground(new java.awt.Color(178, 235, 242));
-        txtarea.setColumns(20);
+        btn4.setBounds(240, 320, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel4.add(btn4);  //Añade el componente al panel
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));  //configurar borde del componente
+        jScrollPane1.setOpaque(false);  //configura la transparencia del componente
+        txtarea.setEditable(false); //no se puede editar el txtarea
+        txtarea.setBackground(new java.awt.Color(178, 235, 242));    //se configura el color de fondo del componente
+        txtarea.setColumns(20); //columnas
         txtarea.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        txtarea.setRows(5);
-        txtarea.setBorder(null);
-        jScrollPane1.setViewportView(txtarea);
-        jScrollPane1.setBounds(80, 370, 280, 130);
-        jPanel4.add(jScrollPane1);
-        btn5.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        btn5.setForeground(new java.awt.Color(0, 102, 153));
-        btn5.setText("Regresar");
+        txtarea.setRows(5); //filas
+        txtarea.setBorder(null); //quitar borde
+        jScrollPane1.setViewportView(txtarea); //mostrar txtarea en scrollpane1
+        jScrollPane1.setBounds(80, 370, 280, 130);  //configuracion de tamaño y posicion al componente
+        jPanel4.add(jScrollPane1);  //Añade el componente al panel
+        btn5.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N  //Configura la fuete de letra
+        btn5.setForeground(new java.awt.Color(0, 102, 153));    // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        btn5.setText("Regresar");   //configura el texto a mostrar
         btn5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn5ActionPerformed(evt);
             }
         });
-        btn5.setBounds(740, 450, 100, 30);
-        jPanel4.add(btn5);
-        jScrollPane2.setBackground(new java.awt.Color(250, 229, 211));
-        jScrollPane2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));
-        jScrollPane2.setOpaque(false);
-        txtarea2.setEditable(false);
-        txtarea2.setBackground(new java.awt.Color(178, 235, 242));
-        txtarea2.setColumns(20);
-        txtarea2.setRows(5);
-        txtarea2.setBorder(null);
-        jScrollPane2.setViewportView(txtarea2);
-        jScrollPane2.setBounds(420, 370, 310, 130);
-        jPanel4.add(jScrollPane2);
-        txtformula.setBackground(new java.awt.Color(178, 235, 242));
-        txtformula.setFont(new java.awt.Font("Comic Sans MS", 0, 14));
-        txtformula.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(52, 73, 94)));
-        txtformula.setBounds(500, 330, 190, 20);
-        jPanel4.add(txtformula);
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 14));
-        jLabel2.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel2.setText("Formula general");
-        jLabel2.setBounds(380, 330, 110, 20);
-        jPanel4.add(jLabel2);
-        jLabel18.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36));
-        jLabel18.setForeground(new java.awt.Color(0, 102, 102));
+        btn5.setBounds(740, 450, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel4.add(btn5);  //Añade el componente al panel
+        jScrollPane2.setBackground(new java.awt.Color(250, 229, 211)); //se configura el color de fondo del componente
+        jScrollPane2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));  //configurar borde del componente
+        jScrollPane2.setOpaque(false);  //configura la transparencia del componente
+        txtarea2.setEditable(false); //no se puede editar el txt2
+        txtarea2.setBackground(new java.awt.Color(178, 235, 242)); //se configura el color de fondo del componente
+        txtarea2.setColumns(20); //Columnas
+        txtarea2.setRows(5); //filas
+        txtarea2.setBorder(null); //quitar borde
+        jScrollPane2.setViewportView(txtarea2); //mostrar txtarea2 en scrollpane2
+        jScrollPane2.setBounds(420, 370, 310, 130); //configuracion de tamaño y posicion al componente
+        jPanel4.add(jScrollPane2);  //Añade el componente al panel
+        txtformula.setBackground(new java.awt.Color(178, 235, 242));     //se configura el color de fondo del componente
+        txtformula.setFont(new java.awt.Font("Comic Sans MS", 0, 14));  //Configura la fuete de letra
+        txtformula.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(52, 73, 94)));  //configurar borde del componente
+        txtformula.setBounds(500, 330, 190, 20);    //configuracion de tamaño y posicion al componente
+        jPanel4.add(txtformula);    //Añade el componente al panel
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); //Configura la fuete de letra
+        jLabel2.setForeground(new java.awt.Color(0, 102, 153)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel2.setText("Formula general"); //configura el texto a mostrar
+        jLabel2.setBounds(380, 330, 110, 20);   //configuracion de tamaño y posicion al componente
+        jPanel4.add(jLabel2);   //Añade el componente al panel
+        jLabel18.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36));  //Configura la fuete de letra
+        jLabel18.setForeground(new java.awt.Color(0, 102, 102));    // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("Extrapolación");
+        jLabel18.setText("Extrapolación");//configura el texto a mostrar
         jLabel18.setToolTipText("");
-        jLabel18.setBounds(263, 0, 220, 50);
-        jPanel4.add(jLabel18);
-        txt2.setBackground(new java.awt.Color(178, 235, 242));
-        txt2.setFont(new java.awt.Font("Comic Sans MS", 1, 14));
-        txt2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(52, 73, 94)));
-        txt2.setBounds(370, 150, 50, 30);
-        jPanel4.add(txt2);
-        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel5.setText("X:");
-        jLabel5.setBounds(331, 150, 30, 30);
-        jPanel4.add(jLabel5);
-        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel6.setText("Y:");
-        jLabel6.setBounds(310, 230, 30,30);
-        jPanel4.add(jLabel6);
-        txt3.setBackground(new java.awt.Color(178, 235, 242));
-        txt3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); 
-        txt3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(52, 73, 94)));
-        txt3.setBounds(340, 230, 100, 30);
-        jPanel4.add(txt3);
-        btn6.setFont(new java.awt.Font("Comic Sans MS", 1, 14));
-        btn6.setForeground(new java.awt.Color(0, 102, 153));
-        btn6.setText("Validar");
+        jLabel18.setBounds(263, 0, 220, 50);    //configuracion de tamaño y posicion al componente
+        jPanel4.add(jLabel18);  //Añade el componente al panel
+        txt2.setBackground(new java.awt.Color(178, 235, 242));   //se configura el color de fondo del componente
+        txt2.setFont(new java.awt.Font("Comic Sans MS", 1, 14));    //Configura la fuete de letra
+        txt2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(52, 73, 94)));  //configurar borde del componente
+        txt2.setBounds(370, 150, 50, 30);   //configuracion de tamaño y posicion al componente
+        jPanel4.add(txt2);  //Añade el componente al panel
+        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N   //Configura la fuete de letra
+        jLabel5.setForeground(new java.awt.Color(0, 102, 153)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel5.setText("X:");//configura el texto a mostrar
+        jLabel5.setBounds(331, 150, 30, 30);   //configuracion de tamaño y posicion al componente
+        jPanel4.add(jLabel5);   //Añade el componente al panel
+        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N   //Configura la fuete de letra
+        jLabel6.setForeground(new java.awt.Color(0, 102, 153)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel6.setText("Y:");//configura el texto a mostrar
+        jLabel6.setBounds(310, 230, 30,30); //configuracion de tamaño y posicion al componente
+        jPanel4.add(jLabel6);   //Añade el componente al panel
+        txt3.setBackground(new java.awt.Color(178, 235, 242));   //se configura el color de fondo del componente
+        txt3.setFont(new java.awt.Font("Comic Sans MS", 1, 14));    //Configura la fuete de letra
+        txt3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(52, 73, 94)));  //configurar borde del componente
+        txt3.setBounds(340, 230, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel4.add(txt3);//Añade el componente al panel
+        btn6.setFont(new java.awt.Font("Comic Sans MS", 1, 14));    //Configura la fuete de letra
+        btn6.setForeground(new java.awt.Color(0, 102, 153));    // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        btn6.setText("Validar");    //configura el texto a mostrar
         btn6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn6ActionPerformed(evt);
             }
         });
-        btn6.setBounds(240, 280, 100, 30);
-        jPanel4.add(btn6);
-        btn7.setFont(new java.awt.Font("Comic Sans MS", 1, 14));
-        btn7.setForeground(new java.awt.Color(0, 102, 153));
-        btn7.setText("Limpiar");
+        btn6.setBounds(240, 280, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel4.add(btn6);  //Añade el componente al panel
+        btn7.setFont(new java.awt.Font("Comic Sans MS", 1, 14));   //Configura la fuete de letra
+        btn7.setForeground(new java.awt.Color(0, 102, 153));    // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        btn7.setText("Limpiar");   //configura el texto a mostrar
         btn7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn7ActionPerformed(evt);
             }
         });
-        btn7.setBounds(740, 380, 100, 30);
-        jPanel4.add(btn7);
-        scroll1.setBackground(new java.awt.Color(153, 255, 153));
-        scroll1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));
+        btn7.setBounds(740, 380, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel4.add(btn7);  //Añade el componente al panel
+        scroll1.setBackground(new java.awt.Color(153, 255, 153));    //se configura el color de fondo del componente
+        scroll1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));  //configurar borde del componente
         scroll1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        scroll1.setOpaque(false);
-        scroll1.setViewportView(tabla1);
-        scroll1.setBounds(70, 120, 194, 136);
-        jPanel4.add(scroll1);
+        scroll1.setOpaque(false);   //configura la transparencia del componente
+        scroll1.setViewportView(tabla1); //muestra la tabla en scroll
+        scroll1.setBounds(70, 120, 194, 136);   //configuracion de tamaño y posicion al componente
+        jPanel4.add(scroll1); //Añade el componente al panel
         ventana=new window(860,555,jPanel4,min1,true);
     }// </editor-fold>                        
 //Boton para cargar la tabla                                                        //Evento al hacer clic en el boton
@@ -339,13 +338,7 @@ public class extrapolacion{
         txt3.setText(String.valueOf(evaexpresion.Posfija(matrix[0][3]+",+,(,"+matrix[1][3]+",*,x,),+,(,"+matrix[2][3]+",*,(,x,^,2,),)",txt2.getText()))); //se muestra en Y del panel la ecuacion resuelta, enviada al componente evaluador
     }                                    
                                                                 //Evento al entrar al componente el puntero el mouse                                 
-//metodo para regresar al menu inicio desde el boton de control cerrar             //Evento al hacer clic en el boton
-    private void cerrarActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        menuprincipal m=new menuprincipal();
-        ventana.dispose();
-    }                                   
-                          
-                                                                                  //Validación de campos llenos y tipos de datos correctos
+   //Validación de campos llenos y tipos de datos correctos
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {
     	boolean b=false;
         for(int i=0;i<tabla1.getRowCount();i++){        
@@ -404,7 +397,7 @@ public class extrapolacion{
  //Abrir archivo de ayuda                                                               //Evento al hacer clic en el boton
     private void min1ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String ruta = System.getProperty("user.dir"); //Ruta del sistema
-        String fileLocal = ruta + "/src/docu/EXTRAPOLACION.docx"; //Ruta y  nombre del archivo de ayuda
+        String fileLocal = ruta + "/docu/EXTRAPOLACION.docx"; //Ruta y  nombre del archivo de ayuda
         try   
         {
             File path = new File(fileLocal);        //abre el archivo 

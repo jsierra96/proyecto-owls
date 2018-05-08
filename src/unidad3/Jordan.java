@@ -116,98 +116,98 @@ public class Jordan{ //Clase
  private void initComponents() {
 
         min1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {   //Evento al entrar al componente el puntero el mouse
                 min1MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt) {    //Evento al salir del componente el puntero del mouse
                 min1MouseExited(evt);
             }
         });
         min1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 min1ActionPerformed(evt);
             }
         });
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel1.setText("Numero de variables:");
-        jLabel1.setBounds(40, 60, 190,30);
-        jPanel2.add(jLabel1);
-        txt1.setBackground(new java.awt.Color(178, 235, 242));
+        jLabel1.setForeground(new java.awt.Color(0, 102, 153)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel1.setText("Numero de variables:"); //configura el texto a mostrar
+        jLabel1.setBounds(40, 60, 190,30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(jLabel1);   //añade el componente al panel
+        txt1.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
         txt1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        txt1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));
-        txt1.setBounds(240, 60, 50, 30);
-        jPanel2.add(txt1);
+        txt1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2)); //Configuracion del borde del componente
+        txt1.setBounds(240, 60, 50, 30);    //configuracion de tamaño y posicion al componente
+        jPanel2.add(txt1);  //añade el componente al panel
         btn1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        btn1.setForeground(new java.awt.Color(0, 102, 153));
-        btn1.setText("Generar Matriz");
+        btn1.setForeground(new java.awt.Color(0, 102, 153));    // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        btn1.setText("Generar Matriz"); //configura el texto a mostrar
         btn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn1ActionPerformed(evt);
             }
         });
-        btn1.setBounds(150, 100, 140, 30);
-        jPanel2.add(btn1);
-        scroll.setBackground(new java.awt.Color(178, 235, 242));
-        scroll.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));
-        scroll.setForeground(new java.awt.Color(0, 102, 153));
-        scroll.setOpaque(false);
-        scroll.setBounds(100, 140, 260, 130);
-        jPanel2.add(scroll);
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));
-        txtarea.setBackground(new java.awt.Color(178, 235, 242));
-        txtarea.setColumns(20);
-        txtarea.setRows(5);
-        jScrollPane1.setViewportView(txtarea);
-        jScrollPane1.setBounds(430, 90, 330, 210);
-        jPanel2.add(jScrollPane1);
+        btn1.setBounds(150, 100, 140, 30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn1);  //añade el componente al panel
+        scroll.setBackground(new java.awt.Color(178, 235, 242));    //se configura el color de fondo del componente
+        scroll.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2)); //Configuracion del borde del componente
+        scroll.setForeground(new java.awt.Color(0, 102, 153));  // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        scroll.setOpaque(false);    //configura la transparencia del componente
+        scroll.setBounds(100, 140, 260, 130);   //configuracion de tamaño y posicion al componente
+        jPanel2.add(scroll);    //añade el componente al panel
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));   //Configuracion del borde del componente
+        txtarea.setBackground(new java.awt.Color(178, 235, 242)); //se configura el color de fondo del componente
+        txtarea.setColumns(20); //columnas
+        txtarea.setRows(5); //filas
+        jScrollPane1.setViewportView(txtarea); //muestra el txtarea en ScrollPane
+        jScrollPane1.setBounds(430, 90, 330, 210);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(jScrollPane1);  //añade el componente al panel
         btn2.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        btn2.setForeground(new java.awt.Color(0, 51, 153));
-        btn2.setText("Calcular");
+        btn2.setForeground(new java.awt.Color(0, 51, 153)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        btn2.setText("Calcular");//configura el texto a mostrar
         btn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {  //Evento al hacer clic en el boton
                 btn2ActionPerformed(evt);
             }
         });
-        btn2.setBounds(180, 300, 100, 30);
-        jPanel2.add(btn2);
+        btn2.setBounds(180, 300, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn2);  //añade el componente al panel
         btn3.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        btn3.setForeground(new java.awt.Color(0, 51, 153));
-        btn3.setText("Regresar");
+        btn3.setForeground(new java.awt.Color(0, 51, 153)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        btn3.setText("Regresar");   //configura el texto a mostrar
         btn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn3ActionPerformed(evt);
             }
         });
-        btn3.setBounds(660, 310, 100, 30);
-        jPanel2.add(btn3);
+        btn3.setBounds(660, 310, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn3);  //añade el componente al panel
         jLabel18.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel18.setText("Gauss Jordan");
-        jLabel18.setBounds(280, 0, 210,50);
-        jPanel2.add(jLabel18);
+        jLabel18.setForeground(new java.awt.Color(0, 102, 102));    // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel18.setText("Gauss Jordan"); //configura el texto a mostrar
+        jLabel18.setBounds(280, 0, 210,50); //configuracion de tamaño y posicion al componente
+        jPanel2.add(jLabel18);  //añade el componente al panel
         btn4.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        btn4.setForeground(new java.awt.Color(0, 51, 153));
-        btn4.setText("Validar");
-        btn4.setAutoscrolls(true);
+        btn4.setForeground(new java.awt.Color(0, 51, 153)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        btn4.setText("Validar");    //configura el texto a mostrar
+        btn4.setAutoscrolls(true); //Hacer autoScroll automaticamente
         btn4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn4ActionPerformed(evt);
             }
         });
-        btn4.setBounds(40, 300, 100, 30);
-        jPanel2.add(btn4);
+        btn4.setBounds(40, 300, 100, 30);   //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn4);  //añade el componente al panel
 
         jButton1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 52, 153));
-        jButton1.setText("Limpiar");
+        jButton1.setForeground(new java.awt.Color(0, 52, 153)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jButton1.setText("Limpiar");    //configura el texto a mostrar
         jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 jButton1ActionPerformed(evt);
             }
         });
-        jButton1.setBounds(320, 300, 90, 30);
-        jPanel2.add(jButton1);
+        jButton1.setBounds(320, 300, 90, 30);   //configuracion de tamaño y posicion al componente
+        jPanel2.add(jButton1); //añade el componente al panel
         ventana=new window(800,400,jPanel2,min1,true);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -276,7 +276,7 @@ public class Jordan{ //Clase
 //metodo enlace al archivo de ayuda                                                     //Evento al hacer clic en el boton
     private void min1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_min1ActionPerformed
         String ruta = System.getProperty("user.dir"); //Variable para almacenar ruta del sistema
-        String fileLocal = ruta + "/src/docu/EXTRAPOLACION.docx"; //Nombre del archivo ayuda y carpeta donde se ubica
+        String fileLocal = ruta + "/docu/ECUACIONES-SIMULTÁNEAS-GAUSS-JORDAN.docx"; //Nombre del archivo ayuda y carpeta donde se ubica
         try
         {
             File path = new File(fileLocal);        //abre archivo

@@ -27,72 +27,73 @@ public class Cramer{ //Clase
     }
  private void initComponents() {
         jLabel1.setFont(new java.awt.Font("Harlow Solid Italic", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 121, 107));
-        jLabel1.setText("Cramer");
-        jLabel1.setBounds(300, 10, 130, 27);
-        jPanel1.add(jLabel1);
-        btn2.setText("Ingresar datos");
+        jLabel1.setForeground(new java.awt.Color(0, 121, 107)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel1.setText("Cramer");  //Configura el texto a mostrar
+        jLabel1.setBounds(300, 10, 130, 27);    //configuracion de tamaño y posicion al componente
+        jPanel1.add(jLabel1);   //Añade el componente al panel
+        btn2.setText("Ingresar datos"); //Configura el texto a mostrar
         btn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn2ActionPerformed(evt);
             }
         });
-        btn2.setBounds(30, 220, 150, 30);
-        jPanel1.add(btn2);
+        btn2.setBounds(30, 220, 150, 30);   //configuracion de tamaño y posicion al componente
+        jPanel1.add(btn2);  //Añade el componente al panel
 
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));
-        jScrollPane1.setOpaque(false);
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));  //Configura el borde del componente
+        jScrollPane1.setOpaque(false);  //configura la transparencia del componente
 
         jTextArea1.setBackground(new java.awt.Color(178, 235, 242));
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(26, 82, 118)));
+        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(26, 82, 118)));  //Configura el borde del componente
         jScrollPane1.setViewportView(jTextArea1);
-        jScrollPane1.setBounds(385, 86, 313, 188);
-        jPanel1.add(jScrollPane1);
-        btn3.setText("Limpiar");
+        jScrollPane1.setBounds(385, 86, 313, 188);  //configuracion de tamaño y posicion al componente
+        jPanel1.add(jScrollPane1);      //Añade el componente al panel
+        btn3.setText("Limpiar");    //Configura el texto a mostrar
         btn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn3ActionPerformed(evt);
             }
         });
-        btn3.setBounds(240, 220, 100, 30);
-        jPanel1.add(btn3);
+        btn3.setBounds(240, 220, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel1.add(btn3);  //Añade el componente al panel
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 121, 107));
-        jLabel2.setText("Tama�o de la matriz:");
-        jLabel2.setBounds(30, 80, 200, 30);
-        jPanel1.add(jLabel2);
-        jTextField1.setBackground(new java.awt.Color(178, 235, 242));
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));
-        jTextField1.setBounds(240, 80, 80, 30);
-        jPanel1.add(jTextField1);
-        btn1.setText("Generar Matriz");
+        jLabel2.setForeground(new java.awt.Color(0, 121, 107)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel2.setText("Tama�o de la matriz:");    //Configura el texto a mostrar
+        jLabel2.setBounds(30, 80, 200, 30); //configuracion de tamaño y posicion al componente
+        jPanel1.add(jLabel2);   //Añade el componente al panel
+        jTextField1.setBackground(new java.awt.Color(178, 235, 242));   //se configura el color de fondo del componente
+        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));    //Configura el borde del componente
+        jTextField1.setBounds(240, 80, 80, 30); //configuracion de tamaño y posicion al componente
+        jPanel1.add(jTextField1);   //Añade el componente al panel
+        btn1.setText("Generar Matriz"); //Configura el texto a mostrar
+
         btn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn1);
-        btn1.setBounds(140, 150, 140, 30);
-        jButton1.setText("Regresar");
+        jPanel1.add(btn1);  //Añade el componente al panel
+        btn1.setBounds(140, 150, 140, 30);  //configuracion de tamaño y posicion al componente
+        jButton1.setText("Regresar");   //Configura el texto a mostrar
         jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {  //Evento al hacer clic en el boton
                 jButton1ActionPerformed(evt);
             }
         });
-        jButton1.setBounds(620, 350, 100, 30);
-        jPanel1.add(jButton1);
+        jButton1.setBounds(620, 350, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel1.add(jButton1); //Añade el componente al panel
         min1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {  //Evento al entrar al componente el puntero el mouse
                 min1MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt) {    //Evento al salir del componente el puntero del mouse
                 min1MouseExited(evt);
             }
         });
         min1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 min1ActionPerformed(evt);
             }
         });
@@ -105,6 +106,7 @@ public class Cramer{ //Clase
 //limpiador del area de Texto                                                       //Evento al hacer clic en el boton
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         jTextArea1.setText("");
+        jTextField1.setText("");
     }//GEN-LAST:event_btn3ActionPerformed
  private int tam=0; //Tamaño inicial de 0 de la matriz                              //Evento al hacer clic en el boton
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
@@ -122,17 +124,17 @@ public class Cramer{ //Clase
      catch(Exception e){}
     }
     //Evento al entrar al componente el puntero el mouse
-    private void min1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_min1MouseEntered
-        min1.setBackground(new Color(153, 202, 253));
+    private void min1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_min1MouseEntered    //Evento al entrar al componente el puntero el mouse
+        min1.setBackground(new Color(153, 202, 253));   //se configura el color de fondo del componente
     }//GEN-LAST:event_min1MouseEntered
                                                                                              //Evento del mouse //Evento al salir del componente el puntero del mouse
     private void min1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_min1MouseExited
-        min1.setBackground(new Color(33, 97, 140));
+        min1.setBackground(new Color(33, 97, 140)); //se configura el color de fondo del componente
     }//GEN-LAST:event_min1MouseExited
 //Método para abrir el archivo de ayuda                                               //Evento al hacer clic en el boton
     private void min1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_min1ActionPerformed
         String ruta = System.getProperty("user.dir"); //Variable para almacenar la ruta del sistema
-        String fileLocal = ruta + "/src/docu/EXTRAPOLACION.docx"; //Varable para almacenar el nombre del archivo ayuda asi como la carpeta donde se encuentra
+        String fileLocal = ruta + "/docu/ECUACIONES-SIMULTÁNEAS-CRAMER.docx"; //Varable para almacenar el nombre del archivo ayuda asi como la carpeta donde se encuentra
         try
         {
             File path = new File(fileLocal);  //Abre el archivo
@@ -224,139 +226,107 @@ public class Cramer{ //Clase
                 }
                 jTextArea1.append("-------------------");
 	}
-	//Mostrar vector a
-	public  void mostrarV(float a[]){
-		for(int i=0; i<a.length; i++){                                          //Ciclo para recorrer el vector
-			 jTextArea1.append("El resultado de la matriz en la posicion  [ "+i+" ] es: "+a[i]+"\n");  //imprime dato
-		}
-
-	}
-
-	public static int determinante(float a[][]){                                //Calculo del determinante de la matriz
-		float c[][]=new float[a.length+(a.length-1)][a.length];             //Matriz para el determinante
-		float det = 0;
-
-		//almacena los resultados parciales
-		float par[]=new float[(a.length)*2];
-
-		for(int i=0;i<a.length;i++){
-			for(int j=0; j<a[i].length; j++){
-
-					c[i][j]=a[i][j];                            //almacenamiento de la matriz en la matriz c (determinante)
-
-			}
-		}
-		int k=0;
-		for(int i=a.length;i<c.length;i++){                               //
-			for(int j=0; j<a.length; j++){
-					c[i][j]=a[k][j];
-
-			}
-			k++;
-		}
-
-                                                                                    //calcula la suma de los productos y la inserta en par
-		k=0;
-		float temp=1;
-		float inc=1;
-
-		for (int i=0; i< a.length;i++){                                     //For 1
-			for(int j=0; j<a[i].length;j++){                            //For 2
-				temp=temp*c[k][j];                                  //almacenamiento de productos en matriz temp
-				k++;
-			}
-			k=(int) inc;
-			par[i]=temp;
-			temp=1;
-			inc++;
-		}
-
-                                                                                    //calcula la resta de los productos y la inserta en par
-		k=a.length-1;
-
-		temp=1;
-		inc=a.length-1;
-
-		int l=(par.length)/2;
-
-		for (int i=0; i< a.length;i++){                                         //For1
-			for(int j=0; j<a[i].length;j++){                                //For2
-				temp=temp*c[k][j];                                      //Calculo de productos
-				k--; //k=k-1;                                           //resta en k (fila)
-			}
-			par[l]=-temp;
-			temp=1;
-
-			inc++;
-			k=(int) inc;
-			l++;
-		}
-
-		det=suma(par);
-
-		return (int) det;
-	}
-
-
-	//sustituye los valores de b en a en la posicion pos
-	public static float [][] sustituye(float a[][], float b[], float pos){
-		float c[][] =new float[a.length][a.length];                         //matriz c
-
-
-		for(int i=0;i<a.length;i++){
-			for(int j=0; j<a[i].length; j++){
-				if(j==pos){
-					c[i][j]=b[i];  //sustitucion de valor
-				}
-				else{
-					c[i][j]=a[i][j];            //continua el recorrido
-				}
-
-			}
-
-		}
-
-		return c;
-	}
-
-	public static float suma(float a[]){
-		float result=0;                                         //Variable para resultado
-		for(int i=0; i<a.length; i++){                          //recorrido del vector resultado
-			result=result+a[i];                             //resultado de ecuacion
-		}
-
-		return result;                                           //retorno del resultado
-
-	}
-
-                                                                                    ///funcion cramer
-	public  float[] cramer(float a[][], float b[]){
-		float Rcramer[]=new float[b.length];                               //Vector para el resultado de las variables de la ecucacion
-		float det=determinante(a);                                          //variable que almacena el valor del determinante dato por el calculo en el metodo determinante()
-		if(det==0){                                                         //Si el determinante es 0
-			 jTextArea1.append("No tiene solución\n");                  //matriz sin solución
-			return Rcramer;                                             //retorno del valor
-		}
-
-		float detTemp;
-
-		float c[][]=new float[a.length][a.length];
-		for(int i=0; i<a.length; i++){
-			c=sustituye(a,b,i);                                      // c almacena los valores que devuelve el metodo sustituye los cuales son los valores sustituidos por iteracion en la matriz
-
-			detTemp=determinante(c);                                  //detTemp almacena el valor del determinante
-
-
-			Rcramer[i]=(float)detTemp/(float)det;			//Se almacena en el vector Rcramer el resultado de las operaciones de el determinante por posicion de c entre el determinante de la matriz
-		}
-		return Rcramer;
-	}
-
-                                                                                    //muestra los resultados de X
-		public  void mostrarX(float a[]){
-		for(int i=0; i<a.length; i++){
-			 jTextArea1.append("El valor de X"+i+" es: "+a[i]+"\n");			//imprime
-		}
-
-	}
+	
+        //Mostrar vector a
+  public void mostrarV(float[] a){
+    for (int i = 0; i < a.length; i++)  //Ciclo para recorrer el vector
+      jTextArea1.append("El resultado de la matriz en la posicion  [ " + i + " ] es: " + a[i] + "\n");//imprime dato
+  }
+  //Calculo del determinante de la matriz
+  public static int determinante(float[][] a){
+    float[][] c = new float[a.length + (a.length - 1)][a.length];   //Matriz para el determinante
+    float det = 0.0F;
+        //almacena los resultados parciales
+    float[] par = new float[a.length * 2];
+    for (int i = 0; i < a.length; i++) {
+      for (int j = 0; j < a[i].length; j++) {
+        c[i][j] = a[i][j];                             //almacenamiento de la matriz en la matriz c (determinante)
+      }
+    }
+    int k = 0;
+    for (int i = a.length; i < c.length; i++){
+      for (int j = 0; j < a.length; j++) {
+        c[i][j] = a[k][j];
+      }
+      k++;
+    }                                  
+         //calcula la suma de los productos y la inserta en par
+    k = 0;
+    float temp = 1.0F;
+    float inc = 1.0F;
+    for (int i = 0; i < a.length; i++){
+      for (int j = 0; j < a[i].length; j++){
+        temp *= c[k][j];                             //almacenamiento de productos en matriz temp
+        k++;
+      }
+      k = (int)inc;
+      par[i] = temp;
+      temp = 1.0F;
+      inc += 1.0F;
+    }
+    k = a.length - 1;                        //calcula la resta de los productos y la inserta en par
+    
+    temp = 1.0F;
+    inc = a.length - 1;
+    
+    int l = par.length / 2;
+    for (int i = 0; i < a.length; i++){
+      for (int j = 0; j < a[i].length; j++){
+        temp *= c[k][j];                             //Calculo de productos
+        k--;                                         //resta en k (fila)
+      } 
+      par[l] = (-temp);
+      temp = 1.0F;
+      
+      inc += 1.0F;
+      k = (int)inc;
+      l++;
+    }
+    det = suma(par);
+    
+    return (int)det;
+  }
+         //sustituye los valores de b en a en la posicion pos
+  public static float[][] sustituye(float[][] a, float[] b, float pos){
+    float[][] c = new float[a.length][a.length];  //matriz c
+    for (int i = 0; i < a.length; i++) {
+      for (int j = 0; j < a[i].length; j++) {
+        if (j == pos) {
+          c[i][j] = b[i];                  //sustitucion de valor
+        } else {
+          c[i][j] = a[i][j];               //continua el recorrido
+        }
+      }
+    }
+    return c;
+  }
+    public static float suma(float[] a){
+       float result = 0.0F;                      //Variable para resultado
+       for (int i = 0; i < a.length; i++) {      //recorrido del vector resultado
+         result += a[i];                         //resultado de ecuacion
+       }
+       return result;                            //retorno del resultado
+    }
+                     //funcion cramer
+    public float[] cramer(float[][] a, float[] b){
+    float[] Rcramer = new float[b.length];        //Vector para el resultado de las variables de la ecucacion
+    float det = determinante(a);                  //variable que almacena el valor del determinante dato por el calculo en el metodo determinante()
+    if (det == 0){                                //Si el determinante es 0
+      jTextArea1.append("No tiene solucion\n");   //matriz sin solución
+      return Rcramer;                             //retorno del valor
+    }
+    float[][] c = new float[a.length][a.length];
+       for (int i = 0; i < a.length; i++){
+         c = sustituye(a, b, i);// c almacena los valores que devuelve el metodo sustituye los cuales son los valores sustituidos por iteracion en la matriz
+         float detTemp = determinante(c);//detTemp almacena el valor del determinante
+         Rcramer[i] = (detTemp / det);//Se almacena en el vector Rcramer el resultado de las operaciones de el determinante por posicion de c entre el determinante de la matriz
+       }
+       return Rcramer;
+    }
+                    //muestra los resultados de X
+    public void mostrarX(float[] a){
+        for (int i = 0; i < a.length; i++) {
+            jTextArea1.append("El valor de X" + i + " es: " + a[i] + "\n");  //Imprime los resultados
+        }
+    }
 }

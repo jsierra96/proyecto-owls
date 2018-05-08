@@ -1,6 +1,7 @@
 //Paquete en donde se encuentra la clase
 package unidad2;
 //Importacion de las librerias utilizar
+import LibreriasLion.avaluaexpre;
 import evaluador.prueba;
 import clases.*;
 import java.awt.*;
@@ -59,135 +60,135 @@ public class Newton_Rhapson{
     }
     private void initComponents() {
         min1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {      //Evento al entrar al componente el puntero el mouse
                 min1MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt) {    //Evento al salir del componente el puntero del mouse
                 min1MouseExited(evt);
             }
         });
         min1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 min1ActionPerformed(evt);
             }
         });
-        jPanel3.setBackground(new java.awt.Color(22, 160, 133));
-        jPanel3.setOpaque(false);
-        jPanel3.setLayout(new java.awt.GridLayout(8, 2));
-        jLabel3.setBackground(new java.awt.Color(79, 195, 247));
+        jPanel3.setBackground(new java.awt.Color(22, 160, 133));    //se configura el color de fondo del componente
+        jPanel3.setOpaque(false);   //configura la transparencia del componente
+        jPanel3.setLayout(new java.awt.GridLayout(8, 2)); //establece el lienzo sobre el panel
+        jLabel3.setBackground(new java.awt.Color(79, 195, 247));    //se configura el color de fondo del componente
         jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("x");
-        jLabel3.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 2, 2, new java.awt.Color(19, 141, 117)));
-        jLabel3.setOpaque(true);
-        jPanel3.add(jLabel3);
+        jLabel3.setForeground(new java.awt.Color(0, 0, 153));   // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER); //Aliniamiento central
+        jLabel3.setText("x");   //Configura el texto a mostrar
+        jLabel3.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 2, 2, new java.awt.Color(19, 141, 117)));   //Se configura el borde del componente
+        jLabel3.setOpaque(true);    //configura la transparencia del componente
+        jPanel3.add(jLabel3);   //Añade el componente al panel
 
-        jLabel4.setBackground(new java.awt.Color(79, 195, 247));
+        jLabel4.setBackground(new java.awt.Color(79, 195, 247));    //se configura el color de fondo del componente
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("F ( x )");
-        jLabel4.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 2, 2, 4, new java.awt.Color(19, 141, 117)));
-        jLabel4.setOpaque(true);
-        jPanel3.add(jLabel4);
+        jLabel4.setForeground(new java.awt.Color(0, 0, 153));   // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);  //Aliniamiento central
+        jLabel4.setText("F ( x )"); //Configura el texto a mostrar
+        jLabel4.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 2, 2, 4, new java.awt.Color(19, 141, 117)));    //Se configura el borde del componente
+        jLabel4.setOpaque(true);    //configura la transparencia del componente
+        jPanel3.add(jLabel4);   //Añade el componente al panel
 
-        txt1.setBackground(new java.awt.Color(178, 235, 242));
-        txt1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 2, 2, new java.awt.Color(19, 141, 117)));
-        jPanel3.add(txt1);
+        txt1.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
+        txt1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 2, 2, new java.awt.Color(19, 141, 117)));   //Se configura el borde del componente
+        jPanel3.add(txt1);  //Añade el componente al panel
 
-        txt2.setBackground(new java.awt.Color(178, 235, 242));
-        txt2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 4, new java.awt.Color(19, 141, 117)));
-        jPanel3.add(txt2);
+        txt2.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
+        txt2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 4, new java.awt.Color(19, 141, 117)));   //Se configura el borde del componente
+        jPanel3.add(txt2);  //Añade el componente al panel
 
-        txt3.setBackground(new java.awt.Color(178, 235, 242));
-        txt3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 2, 2, new java.awt.Color(19, 141, 117)));
-        jPanel3.add(txt3);
+        txt3.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
+        txt3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 2, 2, new java.awt.Color(19, 141, 117)));   //Se configura el borde del componente
+        jPanel3.add(txt3);  //Añade el componente al panel
 
-        txt4.setBackground(new java.awt.Color(178, 235, 242));
-        txt4.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 4, new java.awt.Color(19, 141, 117)));
+        txt4.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
+        txt4.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 4, new java.awt.Color(19, 141, 117)));   //Se configura el borde del componente
         txt4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 txt4ActionPerformed(evt);
             }
         });
-        jPanel3.add(txt4);
+        jPanel3.add(txt4);  //Añade el componente al panel
 
-        txt5.setBackground(new java.awt.Color(178, 235, 242));
-        txt5.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 2, 2, new java.awt.Color(19, 141, 117)));
+        txt5.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
+        txt5.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 2, 2, new java.awt.Color(19, 141, 117)));   //Se configura el borde del componente
         txt5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 txt5ActionPerformed(evt);
             }
         });
-        jPanel3.add(txt5);
+        jPanel3.add(txt5);  //Añade el componente al panel
 
-        txt6.setBackground(new java.awt.Color(178, 235, 242));
-        txt6.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 4, new java.awt.Color(19, 141, 117)));
-        jPanel3.add(txt6);
+        txt6.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
+        txt6.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 4, new java.awt.Color(19, 141, 117)));   //Se configura el borde del componente
+        jPanel3.add(txt6);  //Añade el componente al panel
 
-        txt7.setBackground(new java.awt.Color(178, 235, 242));
-        txt7.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 2, 2, new java.awt.Color(19, 141, 117)));
-        jPanel3.add(txt7);
+        txt7.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
+        txt7.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 2, 2, new java.awt.Color(19, 141, 117)));   //Se configura el borde del componente
+        jPanel3.add(txt7);  //Añade el componente al panel
 
-        txt8.setBackground(new java.awt.Color(178, 235, 242));
-        txt8.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 4, new java.awt.Color(19, 141, 117)));
-        jPanel3.add(txt8);
+        txt8.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
+        txt8.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 4, new java.awt.Color(19, 141, 117)));   //Se configura el borde del componente
+        jPanel3.add(txt8);  //Añade el componente al panel
 
-        txt9.setBackground(new java.awt.Color(178, 235, 242));
-        txt9.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 2, 2, new java.awt.Color(19, 141, 117)));
-        jPanel3.add(txt9);
+        txt9.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
+        txt9.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 2, 2, new java.awt.Color(19, 141, 117)));   //Se configura el borde del componente
+        jPanel3.add(txt9);  //Añade el componente al panel
 
-        txt10.setBackground(new java.awt.Color(178, 235, 242));
-        txt10.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 4, new java.awt.Color(19, 141, 117)));
-        jPanel3.add(txt10);
+        txt10.setBackground(new java.awt.Color(178, 235, 242)); //se configura el color de fondo del componente
+        txt10.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 4, new java.awt.Color(19, 141, 117)));  //Se configura el borde del componente
+        jPanel3.add(txt10); //Añade el componente al panel
 
-        txt11.setBackground(new java.awt.Color(178, 235, 242));
-        txt11.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 2, 2, new java.awt.Color(19, 141, 117)));
-        jPanel3.add(txt11);
+        txt11.setBackground(new java.awt.Color(178, 235, 242)); //se configura el color de fondo del componente
+        txt11.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 2, 2, new java.awt.Color(19, 141, 117)));  //Se configura el borde del componente
+        jPanel3.add(txt11);//Añade el componente al panel
 
-        txt12.setBackground(new java.awt.Color(178, 235, 242));
-        txt12.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 4, new java.awt.Color(19, 141, 117)));
-        jPanel3.add(txt12);
+        txt12.setBackground(new java.awt.Color(178, 235, 242)); //se configura el color de fondo del componente
+        txt12.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 4, new java.awt.Color(19, 141, 117)));  //Se configura el borde del componente
+        jPanel3.add(txt12); //Añade el componente al panel
 
-        txt13.setBackground(new java.awt.Color(178, 235, 242));
-        txt13.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 4, 2, new java.awt.Color(19, 141, 117)));
-        jPanel3.add(txt13);
+        txt13.setBackground(new java.awt.Color(178, 235, 242)); //se configura el color de fondo del componente
+        txt13.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 4, 2, new java.awt.Color(19, 141, 117)));  //Se configura el borde del componente
+        jPanel3.add(txt13); //Añade el componente al panel
 
-        txt14.setBackground(new java.awt.Color(178, 235, 242));
-        txt14.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 4, 4, new java.awt.Color(19, 141, 117)));
-        jPanel3.add(txt14);
-        jPanel3.setBounds(49, 193, 128, 164);
-        eti1.setBounds(15, 32, 70, 25);
-        eti2.setBounds(30, 100, 50, 45);
-        jPanel2.add(jPanel3);
-        jPanel2.add(eti1);
-        jPanel2.add(eti2);
-        txtf.setBackground(new java.awt.Color(178, 235, 242));
-        txtf.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));
+        txt14.setBackground(new java.awt.Color(178, 235, 242)); //se configura el color de fondo del componente
+        txt14.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 4, 4, new java.awt.Color(19, 141, 117)));  //Se configura el borde del componente
+        jPanel3.add(txt14); //Añade el componente al panel
+        jPanel3.setBounds(49, 193, 128, 164);   //configuracion de tamaño y posicion al componente
+        eti1.setBounds(15, 32, 70, 25); //configuracion de tamaño y posicion al componente
+        eti2.setBounds(30, 100, 50, 45);    //configuracion de tamaño y posicion al componente
+        jPanel2.add(jPanel3);   //Añade el componente al panel
+        jPanel2.add(eti1);  //Añade el componente al panel
+        jPanel2.add(eti2);  //Añade el componente al panel  
+        txtf.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
+        txtf.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));  //Se configura el borde del componente
         txtf.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtfKeyPressed(evt);
             }
         });
-        txtf.setBounds(90, 30, 120, 28);
-        jPanel2.add(txtf);
-        txtf1.setBackground(new java.awt.Color(178, 235, 242));
-        txtf1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));
-        txtf1.setBounds(90, 110, 120, 28);
-        jPanel2.add(txtf1);
-        btn1.setText("Graficar");
-        btn1.setBorder(null);
+        txtf.setBounds(90, 30, 120, 28);    //configuracion de tamaño y posicion al componente
+        jPanel2.add(txtf);  //Añade el componente al panel
+        txtf1.setBackground(new java.awt.Color(178, 235, 242)); //se configura el color de fondo del componente
+        txtf1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));     //Se configura el borde del componente
+        txtf1.setBounds(90, 110, 120, 28);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(txtf1); //Añade el componente al panel
+        btn1.setText("Graficar");   //Configura el texto a mostrar
+        btn1.setBorder(null);    //Se configura el borde del componente
         btn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn1ActionPerformed(evt);
             }
         });
-        btn1.setBounds(90, 70, 100, 30);
-        jPanel2.add(btn1);
-        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 3));
+        btn1.setBounds(90, 70, 100, 30);    //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn1);  //Añade el componente al panel
+        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 3));  //Se configura el borde del componente
         javax.swing.GroupLayout grafica1Layout = new javax.swing.GroupLayout(grafica1);
-        grafica1.setLayout(grafica1Layout);
+        grafica1.setLayout(grafica1Layout);  //establece el lienzo sobre la grafic
         grafica1Layout.setHorizontalGroup(
             grafica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 494, Short.MAX_VALUE)
@@ -198,7 +199,7 @@ public class Newton_Rhapson{
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
+        jPanel4.setLayout(jPanel4Layout);    //establece el lienzo sobre el panel
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(grafica1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -207,73 +208,70 @@ public class Newton_Rhapson{
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(grafica1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel4.setBounds(280, 50, 500, 380);
-        jPanel2.add(jPanel4);
+        jPanel4.setBounds(280, 50, 500, 380);   //configuracion de tamaño y posicion al componente
+        jPanel2.add(jPanel4);   //Añade el componente al panel
         jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel5.setText("Tolerancia:");
-        jLabel5.setBounds(50, 390, 100,30);
-        jPanel2.add(jLabel5);
-        txt15.setBackground(new java.awt.Color(178, 235, 242));
+        jLabel5.setForeground(new java.awt.Color(0, 0, 153));   // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel5.setText("Tolerancia:"); //Configura el texto a mostrar
+        jLabel5.setBounds(50, 390, 100,30); //configuracion de tamaño y posicion al componente
+        jPanel2.add(jLabel5);   //Añade el componente al panel
+        txt15.setBackground(new java.awt.Color(178, 235, 242)); //se configura el color de fondo del componente
         txt15.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
-        txt15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));
-        txt15.setBounds(150, 390, 70, 30);
-        jPanel2.add(txt15);
+        txt15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));     //Se configura el borde del componente
+        txt15.setBounds(150, 390, 70, 30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(txt15); //Añade el componente al panel
         jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel6.setText("Raiz =");
-        jLabel6.setBounds(230, 450,60,30);
-        jPanel2.add(jLabel6);
-        txt16.setBackground(new java.awt.Color(178, 235, 242));
+        jLabel6.setForeground(new java.awt.Color(0, 0, 153));   // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel6.setText("Raiz =");  //Configura el texto a mostrar
+        jLabel6.setBounds(230, 450,60,30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(jLabel6);   //Añade el componente al panel
+        txt16.setBackground(new java.awt.Color(178, 235, 242)); //se configura el color de fondo del componente
         txt16.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
-        txt16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));
-        txt16.setBounds(300, 450, 110, 30);
-        jPanel2.add(txt16);
-        btn2.setText("Calcular");
+        txt16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 121, 107), 2));     //Se configura el borde del componente
+        txt16.setBounds(300, 450, 110, 30); //configuracion de tamaño y posicion al componente
+        jPanel2.add(txt16); //Añade el componente al panel
+        btn2.setText("Calcular");   //Configura el texto a mostrar
         btn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn2ActionPerformed(evt);
             }
         });
-        btn2.setBounds(450, 450, 100, 30);
-        jPanel2.add(btn2);
-        btn3.setText("Limpiar");
+        btn2.setBounds(450, 450, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn2);  //Añade el componente al panel
+        btn3.setText("Limpiar");    //Configura el texto a mostrar
         btn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn3ActionPerformed(evt);
             }
         });
-        btn3.setBounds(590, 450, 100, 30);
-        jPanel2.add(btn3);
+        btn3.setBounds(590, 450, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn3);  //Añade el componente al panel
         jLabel7.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel7.setText("Newton Rhapson");
-        jLabel7.setBounds(240, 0, 260,50);
-        jPanel2.add(jLabel7);
-        btn4.setText("Validar");
+        jLabel7.setForeground(new java.awt.Color(0, 102, 102)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
+        jLabel7.setText("Newton Rhapson");  //Configura el texto a mostrar
+        jLabel7.setBounds(240, 0, 260,50);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(jLabel7);   //Añade el componente al panel
+        btn4.setText("Validar");   //Configura el texto a mostrar
         btn4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn4ActionPerformed(evt);
             }
         });
-        btn4.setBounds(100, 450, 100, 30);
-        jPanel2.add(btn4);
-        btn5.setText("Regresar");
+        btn4.setBounds(100, 450, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn4);  //Añade el componente al panel
+        btn5.setText("Regresar");   //Configura el texto a mostrar
         btn5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn5ActionPerformed(evt);
             }
         });
-        btn5.setBounds(720, 450, 100, 30);
-        jPanel2.add(btn5);
+        btn5.setBounds(720, 450, 100, 30);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn5);  //Añade el componente al panel
        ventana=new window(850,530,jPanel2,min1,true);
     }
          
         //Metodo para abrir el menu de unidad 2 y cerrar esta ventana de este metodo    //Evento al hacer clic en el boton
-    private void cerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarActionPerformed
-        menu_uni2 m=new menu_uni2();
-        ventana.dispose();
-    }//GEN-LAST:event_cerrarActionPerformed
+
 //evento para tecla precionada                                                          //Evento al presionar clic sobre el componente
     private void txtfKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtfKeyPressed
         if(evt.getKeyCode()==10){
@@ -306,17 +304,19 @@ public class Newton_Rhapson{
        txt14.setText("");                               //
        txt15.setText("");                               //
        txt16.setText("");                               //
+       btn1.setEnabled(false);                                                         //Se deshabilita le boton1
+       btn2.setEnabled(false);   
     }//GEN-LAST:event_btn3ActionPerformed
     //Metodo para evaluar la funcion enviando los valores introducidos en la tabla al componente evaluador      //Evento al hacer clic en el boton
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
 
-                txt2.setText(String.valueOf(prueba.Posfija(txtf.getText(),"("+txt1.getText()+")")));//introduce un valor a la caja de texto txt2, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt1
-                txt4.setText(String.valueOf(prueba.Posfija(txtf.getText(),"("+txt3.getText()+")")));//introduce un valor a la caja de texto txt4, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt3
-                txt6.setText(String.valueOf(prueba.Posfija(txtf.getText(),"("+txt5.getText()+")")));//introduce un valor a la caja de texto txt6, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt5
-                txt8.setText(String.valueOf(prueba.Posfija(txtf.getText(),"("+txt7.getText()+")")));//introduce un valor a la caja de texto txt8, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt7
-                txt10.setText(String.valueOf(prueba.Posfija(txtf.getText(),"("+txt9.getText()+")")));//introduce un valor a la caja de texto txt10, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt9
-                txt12.setText(String.valueOf(prueba.Posfija(txtf.getText(),"("+txt11.getText()+")")));//introduce un valor a la caja de texto txt12, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt11
-                txt14.setText(String.valueOf(prueba.Posfija(txtf.getText(),"("+txt13.getText()+")")));//introduce un valor a la caja de texto txt14, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt13
+                txt2.setText(String.valueOf(prueba.Posfija(txtf.getText(),txt1.getText())));//introduce un valor a la caja de texto txt2, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt1
+                txt4.setText(String.valueOf(prueba.Posfija(txtf.getText(),txt3.getText())));//introduce un valor a la caja de texto txt4, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt3
+                txt6.setText(String.valueOf(prueba.Posfija(txtf.getText(),txt5.getText())));//introduce un valor a la caja de texto txt6, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt5
+                txt8.setText(String.valueOf(prueba.Posfija(txtf.getText(),txt7.getText())));//introduce un valor a la caja de texto txt8, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt7
+                txt10.setText(String.valueOf(prueba.Posfija(txtf.getText(),txt9.getText())));//introduce un valor a la caja de texto txt10, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt9
+                txt12.setText(String.valueOf(prueba.Posfija(txtf.getText(),txt11.getText())));//introduce un valor a la caja de texto txt12, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt11
+                txt14.setText(String.valueOf(prueba.Posfija(txtf.getText(),txt13.getText())));//introduce un valor a la caja de texto txt14, dicho valor es retornado de la libreria evaluador ala cual se le manda la funcion y el valor de x, en este caso txt13
                 double [] valores=new double[7];//crea un areglo de datos de tipo double  de tamaño 7 con nombre vectores
                 valores[0]=Double.parseDouble(txt2.getText());//asigna el valor de txt2 en la primera posicion del arreglo antes creado
                 valores[2]=Double.parseDouble(txt6.getText());//se asigna el valor que se encuentra en la caja de texto txt6 en la tercera posicion del vector
@@ -372,7 +372,7 @@ public class Newton_Rhapson{
         if(txtf.getText().equals("")&&txtf1.getText().equals("")&&txt1.getText().equals("")&&txt3.getText().equals("")
                 &&txt5.getText().equals("")&&txt7.getText().equals("")&&txt9.getText().equals("")
                 &&txt11.getText().equals("")&&txt13.getText().equals("")&&txt15.getText().equals("")){  //valida que las cajas de texto necesarias esten llenas
-            JOptionPane.showMessageDialog(null,"Hay aungun campo vacio");
+            JOptionPane.showMessageDialog(null,"Algun campo esta vacio");
         }else{
             try {                         //Excepcion para validar que los datos introducidos no sean letras y evitar que el programa se detenga
 		Float.parseFloat(txt1.getText());
@@ -386,7 +386,7 @@ public class Newton_Rhapson{
                 btn1.setEnabled(true);
                 btn2.setEnabled(true);
 	    } catch (NumberFormatException nfe){                                    //Excepción
-		JOptionPane.showMessageDialog(null,"El valor de X o X0 no es un numero");       //Mensaje de error
+		JOptionPane.showMessageDialog(null,"Un dato en la columna de X o la tolerancia no es un numero");       //Mensaje de error
 	    }
         }
     }//GEN-LAST:event_btn4ActionPerformed
@@ -406,7 +406,7 @@ public class Newton_Rhapson{
         //Método para el enlace al archivo de ayuda del método                      //Evento al hacer clic en el boton
     private void min1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_min1ActionPerformed
         String ruta = System.getProperty("user.dir"); //Variable que almacena la ruta del sistema
-        String fileLocal = ruta + "/src/docu/EXTRAPOLACION.docx"; //Variable que almacena el nombre del archivo y la carpeta donde se encuentra
+        String fileLocal = ruta + "/docu/RAÍCES-DE-UNA-FUNCIÓN-NEWTON.docx"; //Variable que almacena el nombre del archivo y la carpeta donde se encuentra
         try
         {                       //Excepcion para abrir el archivo sin problemas
             File path = new File(fileLocal);
@@ -423,18 +423,15 @@ public class Newton_Rhapson{
     }//GEN-LAST:event_txt4ActionPerformed
         //Método con el algoritmo para resolver el método newton Rhapson
     public void Newton(double aux){
-        double tol=Double.parseDouble(txt15.getText());  //Variable para la tolerancia de error
+        double tol = Double.parseDouble(txt15.getText());  //Variable para la tolerancia de error
         double error=710;  //Valor definido para limite de error antes de dar el metodo por ciclado
         double xn=aux; //Variable para almacenar el valor de xn debido a las iteraciones
 
         double xn1=0;
         while(error>tol){  //Iteraciones para encontrar el porcentaje de error
-            xn1=xn-((prueba.Posfija(txtf.getText(), String.valueOf(xn)))/(prueba.Posfija(txtf1.getText(),"("+ String.valueOf(xn)+")")));
-            System.out.println(xn1);
-            error=Math.abs((xn1-(xn))/xn1);
-            System.out.println(error);
+            xn1 = xn - avaluaexpre.Posfija(txtf.getText(), String.valueOf(xn)) / prueba.Posfija(txtf1.getText(), String.valueOf(xn));
+            error = Math.abs((xn1 - xn) / xn1);
             if(error>tol){                                  //Comparacion por cada iteración del valor respecto a la tolerancia
-                System.out.println("Si entra");
                 xn=xn1;
             }
         }

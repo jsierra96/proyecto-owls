@@ -38,43 +38,43 @@ public class menu_uni2{  //Clase
        btn4.setContentAreaFilled(false);    //Se configuran areas de contenido llenas en sobre el componente                                                                                                                                                                 //Configuración de icono de botón
    }
     private void initComponents() {
-        btn1.setBorder(null);
-        btn2.setBorder(null);
-        btn3.setBorder(null);
-        btn4.setBorder(null);
+        btn1.setBorder(null);   //deshabilita el borde al boton
+        btn2.setBorder(null);   //deshabilita el borde al boton
+        btn3.setBorder(null);   //deshabilita el borde al boton
+        btn4.setBorder(null);   //deshabilita el borde al boton
         btn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn1ActionPerformed(evt);
             }
         });
-        btn1.setBounds(30, 70, 300, 120);
-        jPanel2.add(btn1);
+        btn1.setBounds(30, 70, 300, 120);   //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn1);  //se añade el componente al panel
         btn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn2ActionPerformed(evt);
             }
         });
-        btn2.setBounds(360, 70, 300, 120);
-        jPanel2.add(btn2);
+        btn2.setBounds(360, 70, 300, 120);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn2);  //se añade el componente al panel
         btn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn3ActionPerformed(evt);
             }
         });
-        btn3.setBounds(30, 230, 300, 120);
-        jPanel2.add(btn3);
+        btn3.setBounds(30, 230, 300, 120);  //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn3);  //se añade el componente al panel
         btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn4ActionPerformed(evt);
             }
         });
-        btn4.setBounds(360, 230, 300, 120);
-        jPanel2.add(btn4);
+        btn4.setBounds(360, 230, 300, 120); //configuracion de tamaño y posicion al componente
+        jPanel2.add(btn4); //se añade el componente al panel
         jLabel3.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel3.setText("Unidad 2 Raices");
-        jLabel3.setBounds(210, 10, 250, 50);
-        jPanel2.add(jLabel3);
+        jLabel3.setText("Unidad 2 Raices"); //se configura el texto a mostrar
+        jLabel3.setBounds(210, 10, 250, 50);   //configuracion de tamaño y posicion al componente
+        jPanel2.add(jLabel3);   //se añade el componente al panel
         ventana=new window(700,400,jPanel2,btn4,false);
     }
 
