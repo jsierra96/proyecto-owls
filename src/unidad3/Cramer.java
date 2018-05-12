@@ -24,6 +24,7 @@ public class Cramer{ //Clase
     // End of variables declaration//GEN-END:variables
     public Cramer() { //Metodo constructor
         initComponents(); //inicializacion de componentes y configuracion de los mismos
+        btn2.setEnabled(false);
     }
  private void initComponents() {
         jLabel1.setFont(new java.awt.Font("Harlow Solid Italic", 1, 36)); // NOI18N
@@ -107,6 +108,7 @@ public class Cramer{ //Clase
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         jTextArea1.setText("");
         jTextField1.setText("");
+        btn2.setEnabled(false);
     }//GEN-LAST:event_btn3ActionPerformed
  private int tam=0; //Tamaño inicial de 0 de la matriz                              //Evento al hacer clic en el boton
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
@@ -117,6 +119,7 @@ public class Cramer{ //Clase
                 throw new Exception("Ha ingresado un numero invalido para el sistema");         //Mensaje de error en el valor para el tamaño
             }
          JOptionPane.showMessageDialog(null, "Correcto");                                       //Mensaje aprobatorio
+         btn2.setEnabled(true);
      }
      catch(NumberFormatException ec){                                                           //Excepción
 	JOptionPane.showMessageDialog(null, "Ha ingresado un valor invalido para el sistema");  //Mensaje de error
@@ -134,7 +137,7 @@ public class Cramer{ //Clase
 //Método para abrir el archivo de ayuda                                               //Evento al hacer clic en el boton
     private void min1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_min1ActionPerformed
         String ruta = System.getProperty("user.dir"); //Variable para almacenar la ruta del sistema
-        String fileLocal = ruta + "/docu/ECUACIONES-SIMULTÁNEAS-CRAMER.docx"; //Varable para almacenar el nombre del archivo ayuda asi como la carpeta donde se encuentra
+        String fileLocal = ruta + "/docu/ECUACIONES-SIMULTÁNEAS-CRAMER.pdf"; //Varable para almacenar el nombre del archivo ayuda asi como la carpeta donde se encuentra
         try
         {
             File path = new File(fileLocal);  //Abre el archivo

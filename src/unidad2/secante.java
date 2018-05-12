@@ -202,7 +202,7 @@ public class secante{ //Clase
 //Método para abrir el documento de ayuda                                               //Evento al hacer clic en el boton
     private void min1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_min1ActionPerformed
         String ruta = System.getProperty("user.dir"); //Variable para almacenar ruta del sistema
-        String fileLocal = ruta + "/docu/RAÍCES-DE-UNA-FUNCIÓN-SECANTE.docx"; //ubicacion y nombre del archivo ayuda
+        String fileLocal = ruta + "/docu/RAÍCES-DE-UNA-FUNCIÓN-SECANTE.pdf"; //ubicacion y nombre del archivo ayuda
         try                             //Excepción para abrir el archivo sin problemas
         {
             File path = new File(fileLocal);        //Abre el documento
@@ -221,5 +221,6 @@ tx3.setText("");                                                                
 tx4.setText("");                                                                    //
 tx5.setText("");                                                                    //
 textarea.setText("");                                                               //
+btn1.setEnabled(false);     //Deshabilitar boton calcular  
     }
 }

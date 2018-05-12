@@ -57,6 +57,7 @@ public class seidel{ //Clase
 
     public seidel() { //Constructor
         initComponents(); //Inicializacion de componentes
+        btn2.setEnabled(false);
     }
 
     private void initComponents() {
@@ -256,6 +257,21 @@ public class seidel{ //Clase
 //boton limpiar                                                                    //Evento al hacer clic en el boton
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
       jTextArea1.setText(" ");
+      btn2.setEnabled(false);
+      this.jTextArea1.setText(" ");
+    this.jTextField1.setText(" ");
+    this.jTextField2.setText(" ");
+    this.jTextField3.setText(" ");
+    this.jTextField4.setText(" ");
+    this.jTextField5.setText(" ");
+    this.jTextField6.setText(" ");
+    this.jTextField7.setText(" ");
+    this.jTextField8.setText(" ");
+    this.jTextField9.setText(" ");
+    this.jTextField10.setText(" ");
+    this.jTextField11.setText(" ");
+    this.jTextField12.setText(" ");
+    this.jTextField13.setText(" ");
     }//GEN-LAST:event_btn3ActionPerformed
 //Captura de valores en las variables                                               //Evento al hacer clic en el boton
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
@@ -275,6 +291,7 @@ public class seidel{ //Clase
      c3x2=Float.parseFloat(jTextField11.getText());                 //valor para x1 en la tercera ecuacion
      c3x3=Float.parseFloat(jTextField12.getText());                 //Valor para x3 en la tercera ecuacion y valor que contiene tercer elemento de diagonal fuerte
      tol=Double.parseDouble(jTextField13.getText());                    //Captura valor de la tolerancia
+     btn2.setEnabled(true);
      if(tol>1)
          JOptionPane.showMessageDialog(null,"Verificar la tolerancia");  //Validacion de la tolerancia
      else
@@ -299,7 +316,7 @@ verificar(); //Una vez los datos introducidos sean correctos, ejecucion del meto
 //Abrir el documento de ayuda                                                       //Evento al hacer clic en el boton
     private void min1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_min1ActionPerformed
         String ruta = System.getProperty("user.dir"); //Ruta del sistema
-        String fileLocal = ruta + "/docu/ECUACIONES-SIMULTÁNEAS-GAUSS-SEIDEL.docx"; //Ruta y nombre del archivo
+        String fileLocal = ruta + "/docu/ECUACIONES-SIMULTÁNEAS-GAUSS-SEIDEL.pdf"; //Ruta y nombre del archivo
         try                     //Abre  el archivo
         {
             File path = new File(fileLocal);

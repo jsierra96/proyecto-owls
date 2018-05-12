@@ -134,7 +134,7 @@ public class menuprincipal{
             //metodo  para el enlace desde el boton de ayuda hacia el documento propio del metodo       //Evento al hacer clic en el boton
     private void min1ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_min1ActionPerformed
         String ruta = System.getProperty("user.dir"); //Variable que almacena la ruta desde el sistema
-        String fileLocal = ruta +"/src/docu/MANUAL-USO.pdf"; //Variable que contiene el nombre del archivo de ayuda y la carpeta donde se encuentra
+        String fileLocal = ruta +"/docu/MANUAL-USO.pdf"; //Variable que contiene el nombre del archivo de ayuda y la carpeta donde se encuentra
         try
         {                                      //excepcion para abrir el archivo sin problemas 
             File path = new File(fileLocal);

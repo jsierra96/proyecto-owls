@@ -76,6 +76,7 @@ public class Inter{
         jScrollPane2.setBounds(350, 140, 310, 136); //configuracion de tamaño y posicion al componente
         jPanel1.add(jScrollPane2);   //añade el componente al panel
         btn1.setText("Cargar tabla");   //configura el mensaje a mostrar
+        txt3.setEditable(false);
         btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {   //Evento al hacer clic en el boton
                 btn1ActionPerformed(evt);
@@ -334,6 +335,9 @@ public class Inter{
        this.txt2.setText("");
        this.txt3.setText("");
        this.txtarea.setText("");
+       btn5.setEnabled(false);      //Se desactiva el boton para validar
+        btn2.setEnabled(false);      //Se desactiva el  boton para diferencias de newton
+        btn3.setEnabled(false);      //se desactiva el boton para LaGrange
        this.tabla1.setVisible(false);
        this.tabla1.getTableHeader().setVisible(false);
     }
@@ -348,7 +352,7 @@ public class Inter{
 //Abrir archivo de ayuda                                                            //Evento al hacer clic en el boton
     private void min1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_min1ActionPerformed
         String ruta = System.getProperty("user.dir"); //Ruta de sistema
-        String fileLocal = ruta + "/docu/INTERPOLACION.docx"; //ruta y nombre del archivo ayuda
+        String fileLocal = ruta + "/docu/INTERPOLACION.pdf"; //ruta y nombre del archivo ayuda
         try{                                   //abre el archivo
            File path = new File(fileLocal);
            Desktop.getDesktop().open(path);

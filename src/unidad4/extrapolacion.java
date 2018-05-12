@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumnModel;
 //Clase
 public class extrapolacion{
 
@@ -54,13 +55,17 @@ public class extrapolacion{
     }
     
     public void cargar_tabla(){ //Metodo para cargar la tabla del tamaño indicado por usuario
-        String nomcolum []={"X","Y"};   //se le almacena el nombre a las columnas 
-        Object [][]tabla=new Integer[Integer.parseInt(txt1.getText())][5]; //se genera la tabla del tamaño indicado por el usuario
-        DefaultTableModel modelo= new DefaultTableModel(tabla,nomcolum);
-        tabla1 = new JTable(modelo);  //tabla contie un nuevo objeto de tipo JTable 
-        tabla1.setBorder(null);//le quita el borde a la tabla
+        String[] nomcolum = { "X", "Y" };   //se le almacena el nombre a las columnas 
+        Object[][] tabla1 = new Integer[Integer.parseInt(this.txt1.getText())][5]; //se genera la tabla del tamaño indicado por el usuario
+        DefaultTableModel modelo = new DefaultTableModel(tabla1, nomcolum);
+        this.tabla = new JTable(modelo);  //tabla contie un nuevo objeto de tipo JTable 
+        TableColumnModel columnModel = this.tabla.getColumnModel();
+        for (int i = 0; i < columnModel.getColumnCount(); i++) {
+            columnModel.getColumn(i).setPreferredWidth(91);
+        }
+        tabla.setBorder(null);//le quita el borde a la tabla
         //Personalización de la tabla
-        scroll1.setViewportView(tabla1);          //Muestra tabla
+        scroll1.setViewportView(tabla);          //Muestra tabla
     }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
@@ -78,6 +83,8 @@ public class extrapolacion{
                 min1ActionPerformed(evt);
             }
         });
+        txtformula.setEditable(false);
+        txt3.setEditable(false);
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); //Configura la fuete de letra
         jLabel1.setForeground(new java.awt.Color(0, 102, 153)); // se configura el color de primer plano utilizado por el método de pintura predeterminado del Componente
         jLabel1.setText("Numero de datos (m):"); //configura el texto a mostrar
@@ -289,7 +296,7 @@ public class extrapolacion{
         double a=0,b=0,c=0,d=0,e=0,f=0; //Variables para la sustitucion de valores de la tabla sobre la formula gral Lineal
         ms=ms+"La formula para Extrapolcaion Lineal:\n (m*a0)+(a1*Σx)=Σy\n(a0Σx)+(a1*Σ(x^2) )=Σxy"; //Mensaje 
         a=Double.parseDouble(txt1.getText()); // recibe el numero de datos m
-        for(int i=0;i<tabla1.getRowCount();i++){ //recorre vector
+        for(int i=0;i<tabla.getRowCount();i++){ //recorre vector
             b=valx[i]+b;  // la variable b recibe la sumatoria de los valores en x 
             c=valy[i]+c;  //la variable c recibe la sumatoria de los valores en y
             d=valx[i]+d;    //la variable d recibe la sumatoria de los valores en x
@@ -312,18 +319,19 @@ public class extrapolacion{
 //Extrapolar por metodo polinomial                                                  //Evento al hacer clic en el boton
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String ms=""; //variable para mensaje
-        double a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,j=0,k=0,l=0,m=0; //Variables para la sustitucion de valores de la tabla sobre la formula gral polinomial
+        double a = 0.0D;double b = 0.0D;double c = 0.0D;double d = 0.0D;double e = 0.0D;double f = 0.0D;
+        double g = 0.0D;double h = 0.0D;double j = 0.0D;double k = 0.0D;double l = 0.0D;double m = 0.0D; //Variables para la sustitucion de valores de la tabla sobre la formula gral polinomial
         ms=ms+"La formula para Extrapolacion Polinomial:\n ma0+(a1*Σx)+a2Σx^2=Σy" //mensaje para la formula polinomial
                 + "\na0Σx+a1*Σx^2+a2Σx^3=Σxy\na0Σx^2+a1Σx^3+a2Σx^4=Σx^2y";
-        a=Double.parseDouble(txt1.getText()); //recibe el numero de datos
-        for(int i=0;i<tabla.getRowCount();i++){ //iteraciones de la formula polinomial
-            b=valx[i]+b; //la variable b almacena la sumatoria de los valores en X
-            c=Math.pow(valx[i], 2.0)+c; //la variable c almacena la sumatoria de los valores al cuadrado en X
-            d=valy[i]+d; //la variable d almacena la sumatoria de los valores en Y
-            g=Math.pow(valx[i],3.0)+g; //la variable g almacena la sumatoria de los valores el cubo en X
-            h=(valx[i]*valy[i])+h; //la variable h almacena la multiplicacion de los valores en X * Y
-            l=Math.pow(valx[i],4.0)+l; //la variable l almacena la sumatoria de los valores a la cuarta en X
-            m=(Math.pow(valx[i],2.0)*valy[i])+m;
+        a = Double.parseDouble(this.txt1.getText()); //recibe el numero de datos
+        for (int i = 0; i < tabla.getRowCount(); i++){ //iteraciones de la formula polinomial
+            b = this.valx[i] + b; //la variable b almacena la sumatoria de los valores en X
+            c = Math.pow(this.valx[i], 2.0D) + c; //la variable c almacena la sumatoria de los valores al cuadrado en X
+            d = this.valy[i] + d; //la variable d almacena la sumatoria de los valores en Y
+            g = Math.pow(this.valx[i], 3.0D) + g; //la variable g almacena la sumatoria de los valores el cubo en X
+            h = this.valx[i] * this.valy[i] + h; //la variable h almacena la multiplicacion de los valores en X * Y
+            l = Math.pow(this.valx[i], 4.0D) + l; //la variable l almacena la sumatoria de los valores a la cuarta en X
+            m = Math.pow(this.valx[i], 2.0D) * this.valy[i] + m;
         }
         e=b; // se copian los valores obtenidos en las sumatorias en variables auxiliares
         f=c; //
@@ -331,19 +339,19 @@ public class extrapolacion{
         k=g; //
         ms=ms+"\n-----------------------\nEl sistema de ecuaciones:\n"+a+"a0 + "+b+" a1+"+c+"a2="+d+""   //sistema de ecuaciones 
                 + "\n"+e+"a0 + "+f+" a1 + "+g+"a2 ="+h+ "\n"+j+"a0 + "+k+" a1 + "+l+"a2 ="+m;
-        double matrix[][]={{a,b,c,d},{e,f,g,h},{j,k,l,m}}; //se crea una matriz con los valores obtenidos anteriormente
-        txtarea.setText(ms); //Muestra sistema de acuaciones
-        matrix=gauus_jordan(matrix,3,4);  //Solución de sistema de ecuaciones por metodo de Gauss jordan 
-        txtformula.setText("Y= "+matrix[0][3]+" + "+matrix[1][3]+"*X + "+matrix[2][3]+"*X^2");  // en el cuadro de texto etiquetado en panel con formula gral se imprime la formula a seguir
-        txt3.setText(String.valueOf(evaexpresion.Posfija(matrix[0][3]+",+,(,"+matrix[1][3]+",*,x,),+,(,"+matrix[2][3]+",*,(,x,^,2,),)",txt2.getText()))); //se muestra en Y del panel la ecuacion resuelta, enviada al componente evaluador
+        double[][] matrix = { { a, b, c, d }, { e, f, g, h }, { j, k, l, m } }; //se crea una matriz con los valores obtenidos anteriormente
+        this.txtarea.setText(ms); //Muestra sistema de acuaciones
+        matrix = gauus_jordan(matrix, 3, 4);  //Solución de sistema de ecuaciones por metodo de Gauss jordan 
+        this.txtformula.setText("Y= " + matrix[0][3] + " + " + matrix[1][3] + "*X + " + matrix[2][3] + "*X^2");  // en el cuadro de texto etiquetado en panel con formula gral se imprime la formula a seguir
+        this.txt3.setText(String.valueOf(evaexpresion.Posfija(matrix[0][3] + ",+,(," + matrix[1][3] + ",*,x,),+,(," + matrix[2][3] + ",*,(,x,^,2,),)", this.txt2.getText()))); //se muestra en Y del panel la ecuacion resuelta, enviada al componente evaluador
     }                                    
                                                                 //Evento al entrar al componente el puntero el mouse                                 
    //Validación de campos llenos y tipos de datos correctos
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {
     	boolean b=false;
-        for(int i=0;i<tabla1.getRowCount();i++){        
-                for(int j=0;j<tabla1.getColumnCount();j++){
-                    if(tabla1.getValueAt(i,j)==null)
+        for(int i=0;i<tabla.getRowCount();i++){        
+                for(int j=0;j<tabla.getColumnCount();j++){
+                    if(tabla.getValueAt(i,j)==null)
                         b=true;
                 }
         }
@@ -355,14 +363,13 @@ public class extrapolacion{
             JOptionPane.showMessageDialog(null,"La tabla esta vacia o valor en la tabla esta vacio");
         else{
             try {   
-            for(int i=0;i<tabla1.getRowCount();i++){        //recorre filas
-                for(int j=0;j<tabla1.getColumnCount();j++){ //recorre columnas
-                         Double.parseDouble(tabla1.getValueAt(i,j).toString() );  //convierte en tipo de dato double
+            for(int i=0;i<tabla.getRowCount();i++){        //recorre filas
+                for(int j=0;j<tabla.getColumnCount();j++){ //recorre columnas
+                         Double.parseDouble(tabla.getValueAt(i,j).toString() );  //convierte en tipo de dato double
                          Double.parseDouble(txt2.getText());
                 }
             }
-             btn2.setEnabled(true);                                   //Deshabilita botones para el calculo
-             btn3.setEnabled(true);
+             btn2.setEnabled(true); 
 	} catch (NumberFormatException nfe){                                        //Excepcion
 		JOptionPane.showMessageDialog(null,"Un valor introducido en la tabla o X, no es un numero ");   //mensaje de error
 	    }
@@ -370,13 +377,16 @@ public class extrapolacion{
     }                                    
 //Método para limpiar la ventana
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        this.txt1.setText("");                                      //SE limpian los componentes de entrada de datos
+    this.txt1.setText("");                                      //SE limpian los componentes de entrada de datos
     this.txt2.setText("");
     this.txt3.setText("");
     this.txtarea.setText("");
     this.txtarea2.setText("");
     this.txtformula.setText("");
-    this.tabla1.setVisible(false);
+    this.tabla.setVisible(false);
+    btn2.setEnabled(false);
+    btn3.setEnabled(false);          //descativa el boton lineal
+    btn4.setEnabled(false);          //desactiva el boton polinomial
     for (int i = 0; i < this.valx.length; i++)
     {
       this.valx[i] = 0.0D;
@@ -397,7 +407,7 @@ public class extrapolacion{
  //Abrir archivo de ayuda                                                               //Evento al hacer clic en el boton
     private void min1ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String ruta = System.getProperty("user.dir"); //Ruta del sistema
-        String fileLocal = ruta + "/docu/EXTRAPOLACION.docx"; //Ruta y  nombre del archivo de ayuda
+        String fileLocal = ruta + "/docu/EXTRAPOLACION.pdf"; //Ruta y  nombre del archivo de ayuda
         try   
         {
             File path = new File(fileLocal);        //abre el archivo 
@@ -411,14 +421,14 @@ public class extrapolacion{
 //Capturar los valores en las variables 
   public void obtener_val(){
       
-       valx=new double[tabla1.getRowCount()];            // valx es un vector que recibe los valores X
-       valy=new double[tabla1.getRowCount()];            //valy es un vector que recibe los valores de y
-        for(int i=0;i<tabla1.getRowCount();i++){         //for para filas
-            for(int j=0;j<tabla1.getColumnCount();j++){  //for para columnas
+       valx=new double[tabla.getRowCount()];            // valx es un vector que recibe los valores X
+       valy=new double[tabla.getRowCount()];            //valy es un vector que recibe los valores de y
+        for(int i=0;i<tabla.getRowCount();i++){         //for para filas
+            for(int j=0;j<tabla.getColumnCount();j++){  //for para columnas
                 if (j==0)                               //Condicion para obtener valores en x
-                    valx[i]=Double.parseDouble(tabla1.getValueAt(i,j).toString() ); //Recibe los valores en x
+                    valx[i]=Double.parseDouble(tabla.getValueAt(i,j).toString() ); //Recibe los valores en x
                 else
-                    valy[i]=Double.parseDouble(tabla1.getValueAt(i,j).toString() );  //Recibe los valores en y
+                    valy[i]=Double.parseDouble(tabla.getValueAt(i,j).toString() );  //Recibe los valores en y
             }
         }
   }

@@ -216,7 +216,7 @@ public class serie_taylor{
  //Evento del boton Ayuda, para el enlace desde el boton hacia el documento propio del metodo       //Evento al hacer clic en el boton
     private void min4ActionPerformed(java.awt.event.ActionEvent evt) {
         String ruta = System.getProperty("user.dir"); //variable para la ruta
-        String fileLocal = ruta + "/docu/SERIES-DE-TAYLOR.docx"; //variable que contiene el nombre del documento y la carpeta donde se encuentra
+        String fileLocal = ruta + "/docu/SERIES-DE-TAYLOR.pdf"; //variable que contiene el nombre del documento y la carpeta donde se encuentra
        //Excepcion para abrir sin problema el archivo
         try{
             File path = new File(fileLocal);        //Abre el archivo

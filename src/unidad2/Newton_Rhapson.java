@@ -101,6 +101,14 @@ public class Newton_Rhapson{
         txt2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 4, new java.awt.Color(19, 141, 117)));   //Se configura el borde del componente
         jPanel3.add(txt2);  //Añade el componente al panel
 
+        txt2.setEditable(false);
+        txt4.setEditable(false);
+        txt6.setEditable(false);
+        txt8.setEditable(false);
+        txt10.setEditable(false);
+        txt12.setEditable(false);
+        txt14.setEditable(false);
+        txt16.setEditable(false);
         txt3.setBackground(new java.awt.Color(178, 235, 242));  //se configura el color de fondo del componente
         txt3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 4, 2, 2, new java.awt.Color(19, 141, 117)));   //Se configura el borde del componente
         jPanel3.add(txt3);  //Añade el componente al panel
@@ -406,7 +414,7 @@ public class Newton_Rhapson{
         //Método para el enlace al archivo de ayuda del método                      //Evento al hacer clic en el boton
     private void min1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_min1ActionPerformed
         String ruta = System.getProperty("user.dir"); //Variable que almacena la ruta del sistema
-        String fileLocal = ruta + "/docu/RAÍCES-DE-UNA-FUNCIÓN-NEWTON.docx"; //Variable que almacena el nombre del archivo y la carpeta donde se encuentra
+        String fileLocal = ruta + "/docu/RAÍCES-DE-UNA-FUNCIÓN-NEWTON.pdf"; //Variable que almacena el nombre del archivo y la carpeta donde se encuentra
         try
         {                       //Excepcion para abrir el archivo sin problemas
             File path = new File(fileLocal);

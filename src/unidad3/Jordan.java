@@ -276,7 +276,7 @@ public class Jordan{ //Clase
 //metodo enlace al archivo de ayuda                                                     //Evento al hacer clic en el boton
     private void min1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_min1ActionPerformed
         String ruta = System.getProperty("user.dir"); //Variable para almacenar ruta del sistema
-        String fileLocal = ruta + "/docu/ECUACIONES-SIMULTÁNEAS-GAUSS-JORDAN.docx"; //Nombre del archivo ayuda y carpeta donde se ubica
+        String fileLocal = ruta + "/docu/ECUACIONES-SIMULTÁNEAS-GAUSS-JORDAN.pdf"; //Nombre del archivo ayuda y carpeta donde se ubica
         try
         {
             File path = new File(fileLocal);        //abre archivo
@@ -292,6 +292,8 @@ public class Jordan{ //Clase
 
 txt1.setText("");
 txtarea.setText("");
+btn2.setEnabled(false);                         //Deshabiltar boton calcular antes de haber ingresado datos
+btn4.setEnabled(false);                         //Deshabilitar boton validar antes de haber ingresado datos
 tabla1.setVisible(false);
 tabla1.getTableHeader().setVisible(false);
 

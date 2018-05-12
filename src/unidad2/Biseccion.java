@@ -183,7 +183,7 @@ public class Biseccion{
  //Evento del boton Ayuda, para el enlace desde el boton hacia el documento propio del metodo       //Evento al hacer clic en el boton
     private void min1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_min1ActionPerformed
         String ruta = System.getProperty("user.dir"); //Variable para almacenar la ruta del sistema
-        String fileLocal = ruta + "/docu/RAÍCES-DE-UNA-FUNCIÓN-BISECCION.docx"; //Variable para almacenar el nombre del documento de ayuda y la carpeta donde se encuentra
+        String fileLocal = ruta + "/docu/RAÍCES-DE-UNA-FUNCIÓN-BISECCION.pdf"; //Variable para almacenar el nombre del documento de ayuda y la carpeta donde se encuentra
         try                             //excepcion para abrir sin problema el archivo de ayuda
         {
             File path = new File(fileLocal);
